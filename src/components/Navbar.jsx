@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${navColor ? 'bg-white' : 'bg-transparent' } w-full hover:bg-white text-gray-800 shadow-md fixed z-[9999]`}>
+    <nav className={`${navColor ? 'bg-white  shadow-md' : 'bg-transparent' } w-full hover:bg-white hover:shadow-md text-gray-800  fixed z-[9999]`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 xl:px-10">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
