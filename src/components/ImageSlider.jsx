@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-const ImageSlider = () => {
+const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const images = [
-    
-    { name: "Marina Beach", src: "./src/assets/gallery/marina.webp" },
-    { name: "Bragadeeshwarar Temple", src: "./src/assets/gallery/Bragadeeshwarar-temple.webp" },
-    { name: "Hogenakkal Falls", src: "./src/assets/gallery/Hogenakkal.webp" },
-    { name: "Mukurthi National Park", src: "./src/assets/gallery/Mukurthi-national-park.webp" },
-    { name: "Ooty Hills", src: "./src/assets/gallery/Ooty.webp" },
-  ];
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -29,12 +20,11 @@ const ImageSlider = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
-  }, [currentIndex]); // Re-run the effect when currentIndex changes
+    if (autoPlay) {
+      const interval = setInterval(goToNext, autoPlayInterval);
+      return () => clearInterval(interval);
+    }
+  }, [currentIndex, autoPlay, autoPlayInterval]);
 
   return (
     <div className="relative w-full md:h-screen h-auto overflow-hidden">
@@ -52,28 +42,25 @@ const ImageSlider = () => {
           </div>
         ))}
       </div>
-      {/* Left Arrow */}
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white text-2xl  px-3 py-1"
+        className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white text-2xl px-3 py-1"
       >
         ❮
       </button>
-      {/* Right Arrow */}
       <button
         onClick={goToNext}
         className="absolute top-1/2 right-5 transform -translate-y-1/2 text-white text-2xl"
       >
         ❯
       </button>
-      {/* Dashes */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-4 h-1 rounded-sm ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+              index === currentIndex ? "bg-white" : "bg-gray-400"
             }`}
           ></button>
         ))}
@@ -83,7 +70,3 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
-
-
-
-

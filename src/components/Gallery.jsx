@@ -4,6 +4,19 @@ import ImageSlider from "./ImageSlider";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 const Gallery = () => {
+  const galleryImages = [
+    { name: "Marina Beach", src: "./src/assets/imageslider/marina.webp" },
+    {
+      name: "Bragadeeshwarar Temple",
+      src: "./src/assets/imageslider/Bragadeeshwarar-temple.webp",
+    },
+    { name: "Hogenakkal Falls", src: "./src/assets/imageslider/Hogenakkal.webp" },
+    {
+      name: "Mukurthi National Park",
+      src: "./src/assets/imageslider/Mukurthi-national-park.webp",
+    },
+    { name: "Ooty Hills", src: "./src/assets/imageslider/Ooty.webp" },
+  ];
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -56,10 +69,10 @@ const Gallery = () => {
       src: "./src/assets/gallery/meenakshi-amman-temple.webp",
     },
     {
-        name: "Pykara Lake",
-        category: "Lakes",
-        src: "./src/assets/gallery/pykara-waterfalls.webp",
-      },
+      name: "Pykara Lake",
+      category: "Lakes",
+      src: "./src/assets/gallery/pykara-lake.webp",
+    },
     {
       name: "Panpoli Thirumalai Kovil",
       category: "Hills",
@@ -96,10 +109,10 @@ const Gallery = () => {
       src: "./src/assets/gallery/thanjavur-periya-kovil.webp",
     },
     {
-        name: "Hogenakkal",
-        category: "Lakes",
-        src: "./src/assets/gallery/hogenakkal.webp",
-      },
+      name: "Avalanche Lake",
+      category: "Lakes",
+      src: "./src/assets/gallery/avalanche-lake.webp",
+    },
     {
       name: "Nilgiri Hills",
       category: "Hills",
@@ -135,7 +148,91 @@ const Gallery = () => {
       category: "Pilgrim Centres",
       src: "./src/assets/gallery/dhandayuthapani-swamy-temple-palani.webp",
     },
-    
+    {
+      name: "Ooty Lake",
+      category: "Lakes",
+      src: "./src/assets/gallery/ootty-lake.webp",
+    },
+    {
+      name: "Balamathi",
+      category: "Hills",
+      src: "./src/assets/gallery/balamathi.webp",
+    },
+    {
+      name: "Tharangambadi Beach",
+      category: "Beaches",
+      src: "./src/assets/gallery/tharangambadi.webp",
+    },
+    {
+      name: "Pulicat Lake Bird Sanctuary",
+      category: "Wildlife",
+      src: "./src/assets/gallery/pulicat-lake-bird-sanctuary.webp",
+    },
+    {
+      name: "Pykara Falls",
+      category: "Waterfalls",
+      src: "./src/assets/gallery/pykara-waterfalls.webp",
+    },
+    {
+      name: "Vivekananda House and Museum",
+      category: "Museums",
+      src: "./src/assets/gallery/vivekananda-museum.webp",
+    },
+    {
+      name: "Athiyaman Fort",
+      category: "Forts",
+      src: "./src/assets/gallery/athiyaman-fort.webp",
+    },
+    {
+      name: "Velankanni Courch",
+      category: "Pilgrim Centres",
+      src: "./src/assets/gallery/velankanni.webp",
+    },
+    {
+      name: "Sembakkam Lake",
+      category: "Lakes",
+      src: "./src/assets/gallery/sembakkam-lake.webp",
+    },
+    {
+      name: "Kolukkumalai",
+      category: "Hills",
+      src: "./src/assets/gallery/kolukkumalai.webp",
+    },
+    {
+      name: "Pondicherry Rock Beach",
+      category: "Beaches",
+      src: "./src/assets/gallery/pondicherry-rock-beach.webp",
+    },
+    {
+      name: "Kodaikanal Wildlife Sanctuary",
+      category: "Wildlife",
+      src: "./src/assets/gallery/kodaikanal-wildlife-sanctuary.webp",
+    },
+    {
+      name: "Courtallam Five Falls",
+      category: "Waterfalls",
+      src: "./src/assets/gallery/courtallam-five-falls.webp",
+    },
+    {
+      name: "Tamilnadu Police Museum",
+      category: "Museums",
+      src: "./src/assets/gallery/police-museum.webp",
+    },
+    {
+      name: "Dindigul Fort",
+      category: "Forts",
+      src: "./src/assets/gallery/dindigul-fort.webp",
+    },
+    {
+      name: "Rameswaram Temple",
+      category: "Pilgrim Centres",
+      src: "./src/assets/gallery/rameswaram-temple.webp",
+    },
+    {
+      name: "Veeranam Lake",
+      category: "Lakes",
+      src: "./src/assets/gallery/veeranam-lake.webp",
+    },
   ];
 
   const filteredImages =
@@ -146,7 +243,7 @@ const Gallery = () => {
   return (
     <>
       <Navbar />
-      <ImageSlider />
+      <ImageSlider images={galleryImages} autoPlay={false} />
       <div className="container md:px-12 px-8 py-12">
         <h1 className="md:text-2xl text-xl font-bold text-center mb-8">
           A Glimpse of Tamil Nadu's Wonders
@@ -192,8 +289,6 @@ const Gallery = () => {
               ))}
             </div>
           </div>
-
-          {/* Gallery */}
           <div className="flex-1 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredImages.map((image) => (
               <div key={image.name} className="relative group">
@@ -210,6 +305,21 @@ const Gallery = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="mt-12 text-center">
+          <p className="text-sm text-gray-600">
+            This site is for educational purposes. To view more images of Tamil
+            Nadu, visit{" "}
+            <a
+              href="https://www.tamilnadutourism.tn.gov.in/photos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              www.tamilnadutourism.tn.gov.in
+            </a>
+            .
+          </p>
         </div>
       </div>
     </>
