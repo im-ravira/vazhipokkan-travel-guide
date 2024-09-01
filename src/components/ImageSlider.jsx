@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
+const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -21,7 +21,10 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
 
   useEffect(() => {
     if (autoPlay) {
-      const interval = setInterval(goToNext, autoPlayInterval);
+      const interval = setInterval(() => {
+        goToNext();
+      }, autoPlayInterval);
+
       return () => clearInterval(interval);
     }
   }, [currentIndex, autoPlay, autoPlayInterval]);
@@ -33,12 +36,20 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-none w-full h-screen">
+          <div key={index} className="flex-none w-full h-screen relative">
             <img
               src={image.src}
               alt={image.name}
               className="w-full h-full object-cover"
             />
+            {Overlay && (
+              <div className="absolute bottom-10 left-10 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg max-w-xs">
+                <h2 className="md:text-2xl text-xl text-white font-extrabold mb-4">"Discover more amazing sights and experiences."</h2>
+                <button className="bg-orange-500 hover:bg-gray-700 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-8 rounded">
+                  Explore
+                </button>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -60,7 +71,7 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-4 h-1 rounded-sm ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
+              index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
           ></button>
         ))}
@@ -70,3 +81,5 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000 }) => {
 };
 
 export default ImageSlider;
+
+
