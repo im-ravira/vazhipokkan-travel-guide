@@ -8,7 +8,8 @@ import {
   FaTrain,
 } from "react-icons/fa";
 import ImageSlider from "./ImageSlider";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar"; 
+import Footer from "./Footer";
 
 const Home = () => {
   const homeImages = [
@@ -95,7 +96,7 @@ const Home = () => {
     <>
       <Navbar />
       <ImageSlider images={homeImages} autoPlay={true} Overlay={true} />
-      <div className="text-center text-left bg-slate-100 md:px-12 px-8 py-12">
+      <div className="text-center bg-slate-100 md:px-12 px-8 py-12">
         <h2 className="md:text-2xl text-xl font-bold text-gray-800 mb-6">
           Welcome to <span className="text-orange-600">Vazhi Pokkan</span>
           <br className="md:hidden" /> - Tamil Nadu Tourism
@@ -114,32 +115,13 @@ const Home = () => {
         </h2>
         <div>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify">
-            Welcome to Tamil Nadu! The land where the tales and influence of
-            Cholas, Pandyas, and Pallavas can still be seen and the beauty
-            landscape, sacred temples, and imposing wildlife make you feel
-            instantly connected with this tourist destination in India. It is
-            not wrong to say if we call Tamil Nadu the heart of Incredible
-            India. It is one of the top places to visit in India due to its rich
-            culture and heritage.
+          Welcome to Tamil Nadu! A land where the echoes of ancient dynasties like the Cholas, Pandyas, and Pallavas still resonate, and where breathtaking landscapes, revered temples, and vibrant wildlife create an unforgettable connection with this diverse region of India. Tamil Nadu is often regarded as the cultural heart of India, known for its rich heritage and deep-rooted traditions.
           </p>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
-            There is an essence of spirituality through plethora of scenic
-            temples, a touch of serenity through its soothing beaches and hill
-            stations, an aura of wilderness and vitality through its amazing
-            Wildlife Sanctuaries and National Parks, a sense of joy through its
-            various festivals and art forms, a spirit of authenticity through
-            its delectable cuisines and liveliness in its colorful markets. Yes,
-            this bliss of South India is one of a kind. Come here and you will
-            realize you are in a land of where each mile reveals something of
-            great universal value. In terms of tourism, it has too much to offer
-            that you will fall short of vitality to explore.
+          Explore the spiritual aura of its countless temples, relax on serene beaches and in peaceful hill stations, and experience the vitality of its diverse wildlife sanctuaries and national parks. The state's vibrant festivals, traditional art forms, and bustling markets add to its unique charm. Whether you're seeking spiritual fulfillment, natural beauty, or cultural richness, Tamil Nadu offers an unparalleled journey through South India.
           </p>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
-            Tourists here have a variety of experiences to relish. Be it
-            heritage monuments, calm beaches, mesmerizing Hill stations or the
-            scenic temples, Tamil Nadu is a colorful palette rich culture and
-            beauty. Which is the reason Tamil Nadu being the most popular
-            tourist destination in India.
+          With a wide array of experiences, from ancient heritage sites to tranquil beaches and scenic hill stations, Tamil Nadu stands out as one of India's top tourist destinations, promising something special at every turn.
           </p>
         </div>
 
@@ -270,6 +252,7 @@ const Home = () => {
           &nbsp;and modified to avoid copyright issues.
         </p>
       </div>
+      <Footer />
     </>
   );
 };

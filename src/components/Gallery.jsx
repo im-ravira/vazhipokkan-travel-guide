@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import ImageSlider from "./ImageSlider";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import Footer from "./Footer";
 
 const Gallery = () => {
   const galleryImages = [
@@ -322,6 +323,7 @@ const Gallery = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
