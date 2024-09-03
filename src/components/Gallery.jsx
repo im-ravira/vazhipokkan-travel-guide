@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import ImageSlider from "./ImageSlider";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
@@ -240,6 +240,10 @@ const Gallery = () => {
     selectedCategory === "All Categories"
       ? images
       : images.filter((image) => image.category === selectedCategory);
+
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
   return (
     <>

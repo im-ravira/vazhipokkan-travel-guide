@@ -1,19 +1,22 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Gallery from './components/Gallery'
-import About from './components/About'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Gallery from "./components/Gallery";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      <Gallery />
-      <About />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
+};
 
-    </div>
-  )
-}
+export default App;
 
-export default App

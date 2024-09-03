@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaBus,
   FaCloudRain,
@@ -10,6 +10,7 @@ import {
 import ImageSlider from "./ImageSlider";
 import Navbar from "./Navbar"; 
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const homeImages = [
@@ -92,13 +93,17 @@ const Home = () => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
       <ImageSlider images={homeImages} autoPlay={true} Overlay={true} />
       <div className="text-center bg-slate-100 md:px-12 px-8 py-12">
         <h2 className="md:text-2xl text-xl font-bold text-gray-800 mb-6">
-          Welcome to <span className="text-orange-600">Vazhi Pokkan</span>
+          Welcome to <span className="text-orange-600">Vazhipokkan</span>
           <br className="md:hidden" /> - Tamil Nadu Tourism
         </h2>
         <p className="md:text-base text-sm text-gray-700 md:text-center text-justify md:px-64 px-3">
@@ -128,7 +133,7 @@ const Home = () => {
         {/* View More Button */}
         <div className="flex justify-start text-center mt-8">
           <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
-            View More
+            <Link to="/about">View More</Link>
           </button>
         </div>
       </div>
@@ -200,10 +205,10 @@ const Home = () => {
       {/* Best Time to Visit Tamil Nadu Section */}
       <div className="flex flex-col bg-white md:px-16 px-8 py-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
+          <h2 className="md:text-2xl text-lg font-medium text-gray-800">
             Best Time to Visit Tamil Nadu
           </h2>
-          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
+          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-1 md:px-6 mx-4 px-2 rounded-full hover:bg-orange-700 transition duration-300">
             View More
           </button>
         </div>
@@ -237,14 +242,14 @@ const Home = () => {
           #TamilnaduTourism. This project is intended for educational purposes
           only. For more information, please visit:
           <a
-            href="https://www.tamilnadutourism.tn.gov.in"
+            href="https://www.tamilnadutourism.tn.gov.in/" target="_blank"
             className="text-orange-600 hover:underline ml-1"
           >
             www.tamilnadutourism.tn.gov.in
           </a>
           . All images and content have been sourced from
           <a
-            href="https://www.tamilnadutourism.tn.gov.in"
+            href="https://www.tamilnadutourism.tn.gov.in/" target="_blank"
             className="text-orange-600 hover:underline ml-1"
           >
             www.tamilnadutourism.tn.gov.in 

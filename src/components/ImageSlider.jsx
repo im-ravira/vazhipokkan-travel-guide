@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay = false }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +47,7 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay
               <div className="absolute bottom-10 left-10 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg max-w-xs">
                 <h2 className="md:text-2xl text-xl text-white font-extrabold mb-4">"Discover more amazing sights and experiences."</h2>
                 <button className="bg-orange-500 hover:bg-gray-700 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-8 rounded">
-                  Explore
+                 <Link to="/gallery">Explore</Link>
                 </button>
               </div>
             )}

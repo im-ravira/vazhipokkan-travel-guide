@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaSortDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDestinationsOpen, setDestinationsOpen] = useState(false);
@@ -29,9 +30,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 text-center mt-0">
-            <a href="#" className="md:text-[1.75rem] text-[1.4rem] text-orange-600 font-bold font-Macondo">
-              <h1>Vazhi Pokkan</h1> <p className="md:text-[0.6rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">Discover Tamil Nadu's Wonders</p>
-            </a>
+            <Link href="/" className="md:text-[1.75rem] text-[1.4rem] text-orange-600 font-bold font-Macondo">
+              <h1>Vazhipokkan</h1> <p className="md:text-[0.6rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">Discover Tamil Nadu's Wonders</p>
+            </Link>
           </div>
 
           {/* Nav Links 
@@ -48,9 +49,9 @@ const Navbar = () => {
 
             {/* Desktop Links */}
             <div className={`hidden md:flex md:space-x-3 xl:space-x-6 md:text-sm text-xs font-semibold`}>
-              <a href="#" className="hover:text-orange-500">
+              <Link to="/" className="hover:text-orange-500">
                 Home
-              </a>
+              </Link>
               <div
                 className="relative"
                 onMouseEnter={() => setDestinationsOpen(true)}
@@ -203,15 +204,15 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              <a href="#" className="hover:text-orange-500">
+              <Link to="/gallery" className="hover:text-orange-500">
                 Gallery
-              </a>
-              <a href="#" className="hover:text-orange-500">
+              </Link>
+              <Link to="/about" className="hover:text-orange-500">
                 About
-              </a>
-              <a href="#" className="hover:text-orange-500">
+              </Link>
+              <Link to="/contact" className="hover:text-orange-500">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -220,12 +221,12 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden text-xs">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="block px-3 py-2 rounded-md text-xs font-medium text-gray-800 hover:bg-orange-300"
             >
               Home
-            </a>
+            </Link>
             <div className="relative">
               <button
                 onClick={() => setDestinationsOpen(!isDestinationsOpen)}
@@ -366,24 +367,24 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <a
-              href="#"
+            <Link
+              to="/gallery"
               className="block px-3 py-2 rounded-md text-xs font-medium text-gray-800 hover:bg-orange-300"
             >
               Gallery
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about"
               className="block px-3 py-2 rounded-md text-xs font-medium text-gray-800 hover:bg-orange-300"
             >
               About
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/contact"
               className="block px-3 py-2 rounded-md text-xs font-medium text-gray-800 hover:bg-orange-300"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
