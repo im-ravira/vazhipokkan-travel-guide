@@ -248,10 +248,10 @@ const Gallery = () => {
   return (
     <>
       <Navbar />
-      <ImageSlider images={galleryImages} autoPlay={false} />
+      <ImageSlider images={galleryImages} autoPlay={true} />
       <div className="container md:px-12 px-8 py-12">
         <h1 className="md:text-2xl text-xl font-bold text-center mb-8">
-          A Glimpse of Tamil Nadu's Wonders
+          A Glimpse of <br className="md:hidden block" /> Tamil Nadu's Wonders
         </h1>
         <p className="md:text-base text-sm md:text-center text-justify mb-12">
           Explore the beauty and diversity of Tamil Nadu through our curated
@@ -260,7 +260,7 @@ const Gallery = () => {
           admiring the state's wonders, there's something for everyone in our
           gallery.
         </p>
-        <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex flex-col gap-8 lg:flex-row">
           <div className="flex flex-col gap-2 items-start">
             <button
               className="flex items-center justify-between bg-orange-600 w-full text-white px-4 py-2 rounded"

@@ -2,7 +2,8 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4">
+    <>
+    <footer className="bg-gray-800 text-white w-full m-0 px-0 py-4">
       <div className="flex justify-center space-x-6 mb-2">
         <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} className="hover:text-blue-500" />
@@ -25,6 +26,7 @@ const Footer = () => {
         <p>&copy; Vazhipokkan | tamilnadutourism.gov.in 2024</p>
       </div>
     </footer>
+    </>
   );
 };
 

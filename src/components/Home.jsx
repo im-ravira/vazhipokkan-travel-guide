@@ -11,6 +11,7 @@ import ImageSlider from "./ImageSlider";
 import Navbar from "./Navbar"; 
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import DestinationCard from "./DestinationCard";
 
 const Home = () => {
   const homeImages = [
@@ -93,10 +94,7 @@ const Home = () => {
     },
   ];
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+ 
   return (
     <>
       <Navbar />
@@ -106,9 +104,9 @@ const Home = () => {
           Welcome to <span className="text-orange-600">Vazhipokkan</span>
           <br className="md:hidden" /> - Tamil Nadu Tourism
         </h2>
-        <p className="md:text-base text-sm text-gray-700 md:text-center text-justify md:px-64 px-3">
+        <p className="md:text-base text-sm text-gray-700 md:text-center text-justify md:px-38 px-3">
           Experience the invigorating charm of Tamil Nadu, the cultural capital
-          of India. Dive into its rich heritage and vibrant traditions with our
+          of India. <br /> Dive into its rich heritage and vibrant traditions with our
           detailed guide.
         </p>
       </div>
@@ -144,32 +142,27 @@ const Home = () => {
           <h2 className="md:text-2xl text-xl font-bold text-gray-800">
             Best Places to Visit in Tamil Nadu
           </h2>
-          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
+          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
             View More
           </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {placesToVisit.map((place, index) => (
-            <div
+            <DestinationCard
               key={index}
-              className="bg-white border border-gray-200 p-4 rounded-lg shadow-md"
-            >
-              <img
-                src={place.src}
-                alt={place.name}
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2">
-                  {place.name}
-                </h3>
-                <p className="text-gray-700 text-sm">{place.content}</p>
-              </div>
-            </div>
+              name={place.name}
+              src={place.src}
+              content={place.content}
+              additionalClasses="md:w-full lg:w-full"
+            />
           ))}
         </div>
+        <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            View More
+          </button>
       </div>
+
 
       {/* How to Reach Tamil Nadu Section */}
       <div className="flex flex-col bg-white md:px-16 px-8 py-12">
@@ -177,7 +170,7 @@ const Home = () => {
           <h2 className="md:text-2xl text-xl font-bold text-gray-800">
             How to Reach Tamil Nadu?
           </h2>
-          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
+          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
             View More
           </button>
         </div>
@@ -186,58 +179,64 @@ const Home = () => {
           {travelOptions.map((option, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 p-4 rounded-lg shadow-md flex flex-col items-start"
+              className="bg-white border border-gray-200 p-10 rounded-lg shadow-md flex flex-col items-start"
             >
               <div className="flex flex-row items-center gap-3">
                 {option.icon}
-                <h3 className="text-lg mt-4 font-bold text-gray-800 mb-2">
+                <h3 className="md:text-lg text-base mt-4 font-bold text-gray-800 mb-2">
                   {option.name}
                 </h3>
               </div>
-              <p className="text-gray-700 text-left text-sm">
+              <p className="text-gray-700 text-left md:text-base text-sm">
                 {option.content}
               </p>
             </div>
           ))}
         </div>
+        <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            View More
+          </button>
       </div>
 
       {/* Best Time to Visit Tamil Nadu Section */}
       <div className="flex flex-col bg-white md:px-16 px-8 py-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-lg font-medium text-gray-800">
+          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
             Best Time to Visit Tamil Nadu
           </h2>
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-1 md:px-6 mx-4 px-2 rounded-full hover:bg-orange-700 transition duration-300">
+          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-4 rounded-full hover:bg-orange-700 transition duration-300 md:block hidden ">
             View More
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-start gap-6">
           {bestTimeToVisit.map((season, index) => (
             <div
               key={index}
-              className="flex flex-col items-start bg-white border border-gray-200 p-4 rounded-lg shadow-md"
+              className="flex flex-col items-start bg-white border border-gray-200 p-8 rounded-lg shadow-md"
             >
               <div className="flex flex-row items-center gap-3">
                 {season.icon}
-                <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+                <h3 className="md:text-lg text-base font-bold text-gray-800 mt-4 mb-2">
                   {season.name}
                 </h3>
               </div>
-              <p className="text-gray-700 text-sm text-left">
+              <p className="text-gray-700 md:text-base text-sm text-left">
                 {season.content}
               </p>
             </div>
           ))}
         </div>
+        <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-4 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            View More
+          </button>
       </div>
       {/* Disclaimer Section */}
       <div className="flex flex-col items-start bg-slate-100 md:px-14 px-8 py-12 text-center">
-        <h3 className="text-2xl font-bold">
+        <h3 className="md:text-2xl text-xl font-bold">
           #TamilnaduTourism
         </h3>
-        <p className="text-gray-600 text-base text-left mt-4">
+        <p className="text-gray-600 md:text-base text-sm text-left mt-4">
           Explore the world and discover the unique charm of Tamil Nadu with
           #TamilnaduTourism. This project is intended for educational purposes
           only. For more information, please visit:

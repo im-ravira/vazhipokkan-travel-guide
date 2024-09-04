@@ -37,14 +37,14 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-none w-full h-screen relative">
+          <div key={index} className="flex-none w-full md:h-screen h-72  relative">
             <img
               src={image.src}
               alt={image.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full  object-cover"
             />
             {Overlay && (
-              <div className="absolute bottom-10 left-10 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg max-w-xs">
+              <div className="absolute bottom-10 left-10 bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg max-w-xs md:block hidden">
                 <h2 className="md:text-2xl text-xl text-white font-extrabold mb-4">"Discover more amazing sights and experiences."</h2>
                 <button className="bg-orange-500 hover:bg-gray-700 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-8 rounded">
                  <Link to="/gallery">Explore</Link>

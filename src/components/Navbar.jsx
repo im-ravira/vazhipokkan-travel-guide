@@ -31,7 +31,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 text-center mt-0">
             <Link href="/" className="md:text-[1.75rem] text-[1.4rem] text-orange-600 font-bold font-Macondo">
-              <h1>Vazhipokkan</h1> <p className="md:text-[0.6rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">Discover Tamil Nadu's Wonders</p>
+              <h1>Vazhipokkan</h1> <p className="md:text-[0.69rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">Discover Tamil Nadu's Wonders</p>
             </Link>
           </div>
 
@@ -58,21 +58,21 @@ const Navbar = () => {
                 onMouseLeave={() => setDestinationsOpen(false)}
               >
                 <div className="flex flex-row items-center space-x-1 hover:text-orange-500">
-                  <a href="#">
+                  <Link to="/destinations">
                     Destinations
-                  </a>
+                  </Link>
                   <FaSortDown size={16}/>
                 </div>
                 {isDestinationsOpen && (
                   <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg border border-gray-400 z-10">
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full h-0 w-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-gray-400"></div>
                     <div className="py-2">
-                    <a
-                        href="#"
+                    <Link
+                        to="/destinations"
                         className="block px-4 py-2 font-normal hover:text-orange-600"
                       >
                        <span className="text-orange-500 font-semibold">&#x22EE;</span> Popular Destinations
-                      </a>
+                      </Link>
                       <a
                         href="#"
                         className="block px-4 py-2 font-normal hover:text-orange-600"

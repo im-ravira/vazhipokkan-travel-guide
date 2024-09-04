@@ -6,9 +6,8 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-
-      <div className="  min-h-screen py-24 p-6">
-        <div className="flex md:flex-row flex-col gap-6 items-center justify-center">
+      <div className="w-full pt-28 pb-14 px-4">
+        <div className="flex lg:flex-row flex-col gap-6 items-center justify-center">
           <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-8 w-full max-w-lg transform hover:scale-105 transition-transform duration-300">
             <h1 className="text-2xl font-extrabold text-gray-800 mb-6">
               Thanks For Looking!
