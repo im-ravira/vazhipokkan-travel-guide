@@ -19,10 +19,13 @@ const Footer = () => {
         </a>
       </div>
       <hr className="border-gray-700 mb-2" />
-      <div className="text-center text-xs mt-3">
-        <p>If you'r facing any bug or issue while using this site feel free to contact</p>
+      <div className="mt-3 text-center text-sm block md:hidden">
+        <p>&copy; Vazhipokkan | tamilnadutourism.gov.in 2024</p>
       </div>
-      <div className="mt-3 text-center text-sm">
+      <div className="text-center text-xs mt-3">
+        <p>If you'r facing any bug or issue while using<br className="md:hidden block" /> this site feel free to contact</p>
+      </div>
+      <div className="mt-3 text-center text-sm hidden md:block">
         <p>&copy; Vazhipokkan | tamilnadutourism.gov.in 2024</p>
       </div>
     </footer>

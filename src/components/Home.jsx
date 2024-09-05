@@ -8,7 +8,7 @@ import {
   FaTrain,
 } from "react-icons/fa";
 import ImageSlider from "./ImageSlider";
-import Navbar from "./Navbar"; 
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import DestinationCard from "./DestinationCard";
@@ -72,6 +72,26 @@ const Home = () => {
         "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
     },
   ];
+  const TopAttractions = [
+    {
+      name: "Hills",
+      src: "./src/assets/gallery/the-nilgiri-mountain-railway.webp",
+      content:
+        "Tamil Nadu's hills, like Ooty and Kodaikanal, boast lush landscapes and cool climates. They’re perfect for trekking, boating, and enjoying scenic views.",
+    },
+    {
+      name: "Beachs",
+      src: "./src/assets/gallery/dhanushkodi.webp",
+      content:
+        "Tamil Nadu's beaches, such as Marina and Mahabalipuram, feature golden sands and vibrant coastal views. They are ideal for enjoying, and watching spectacular sunsets.",
+    },
+    {
+      name: "Wildlife",
+      src: "./src/assets/gallery/mudumalai.webp",
+      content:
+        "Tamil Nadu's wildlife sanctuaries, such as Mudumalai and Anamalai, showcase diverse wildlife, including elephants and tigers, offering an intimate nature experience.",
+    },
+  ];
 
   const bestTimeToVisit = [
     {
@@ -94,7 +114,6 @@ const Home = () => {
     },
   ];
 
- 
   return (
     <>
       <Navbar />
@@ -102,12 +121,12 @@ const Home = () => {
       <div className="text-center bg-slate-100 md:px-12 px-8 py-12">
         <h2 className="md:text-2xl text-xl font-bold text-gray-800 mb-6">
           Welcome to <span className="text-orange-600">Vazhipokkan</span>
-          <br className="md:hidden" /> - Tamil Nadu Tourism
+          <br className="md:hidden block" /> - Tamil Nadu Tourism
         </h2>
         <p className="md:text-base text-sm text-gray-700 md:text-center text-justify md:px-38 px-3">
           Experience the invigorating charm of Tamil Nadu, the cultural capital
-          of India. <br /> Dive into its rich heritage and vibrant traditions with our
-          detailed guide.
+          of India. <br className="md:block hidden"/> Dive into its rich heritage and vibrant traditions
+          with our detailed guide.
         </p>
       </div>
 
@@ -118,13 +137,27 @@ const Home = () => {
         </h2>
         <div>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify">
-          Welcome to Tamil Nadu! A land where the echoes of ancient dynasties like the Cholas, Pandyas, and Pallavas still resonate, and where breathtaking landscapes, revered temples, and vibrant wildlife create an unforgettable connection with this diverse region of India. Tamil Nadu is often regarded as the cultural heart of India, known for its rich heritage and deep-rooted traditions.
+            Welcome to Tamil Nadu! A land where the echoes of ancient dynasties
+            like the Cholas, Pandyas, and Pallavas still resonate, and where
+            breathtaking landscapes, revered temples, and vibrant wildlife
+            create an unforgettable connection with this diverse region of
+            India. Tamil Nadu is often regarded as the cultural heart of India,
+            known for its rich heritage and deep-rooted traditions.
           </p>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
-          Explore the spiritual aura of its countless temples, relax on serene beaches and in peaceful hill stations, and experience the vitality of its diverse wildlife sanctuaries and national parks. The state's vibrant festivals, traditional art forms, and bustling markets add to its unique charm. Whether you're seeking spiritual fulfillment, natural beauty, or cultural richness, Tamil Nadu offers an unparalleled journey through South India.
+            Explore the spiritual aura of its countless temples, relax on serene
+            beaches and in peaceful hill stations, and experience the vitality
+            of its diverse wildlife sanctuaries and national parks. The state's
+            vibrant festivals, traditional art forms, and bustling markets add
+            to its unique charm. Whether you're seeking spiritual fulfillment,
+            natural beauty, or cultural richness, Tamil Nadu offers an
+            unparalleled journey through South India.
           </p>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
-          With a wide array of experiences, from ancient heritage sites to tranquil beaches and scenic hill stations, Tamil Nadu stands out as one of India's top tourist destinations, promising something special at every turn.
+            With a wide array of experiences, from ancient heritage sites to
+            tranquil beaches and scenic hill stations, Tamil Nadu stands out as
+            one of India's top tourist destinations, promising something special
+            at every turn.
           </p>
         </div>
 
@@ -143,26 +176,51 @@ const Home = () => {
             Best Places to Visit in Tamil Nadu
           </h2>
           <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
-            View More
+            <Link to="/destinations">View More</Link>
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {placesToVisit.map((place, index) => (
             <DestinationCard
               key={index}
               name={place.name}
               src={place.src}
               content={place.content}
-              additionalClasses="md:w-full lg:w-full"
+              additionalClasses="md:w-full lg:w-full p-1"
             />
           ))}
         </div>
         <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+          <Link to="/destinations">View More</Link>
+        </button>
+      </div>
+      {/* Top Attractions in Tamil Nadu Section */}
+      <div className="flex flex-col bg-white md:px-16 px-8 py-12">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
+            Top Attractions in Tamil Nadu Section
+          </h2>
+          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
             View More
           </button>
-      </div>
+        </div>
 
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-2">
+          {TopAttractions.map((place, index) => (
+            <DestinationCard
+              key={index}
+              name={place.name}
+              src={place.src}
+              content={place.content}
+              additionalClasses="md:w-full lg:w-full p-0"
+            />
+          ))}
+        </div>
+        <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+          View More
+        </button>
+      </div>
 
       {/* How to Reach Tamil Nadu Section */}
       <div className="flex flex-col bg-white md:px-16 px-8 py-12">
@@ -175,7 +233,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {travelOptions.map((option, index) => (
             <div
               key={index}
@@ -194,8 +252,8 @@ const Home = () => {
           ))}
         </div>
         <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
+          View More
+        </button>
       </div>
 
       {/* Best Time to Visit Tamil Nadu Section */}
@@ -209,7 +267,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-start gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-start gap-6">
           {bestTimeToVisit.map((season, index) => (
             <div
               key={index}
@@ -228,32 +286,32 @@ const Home = () => {
           ))}
         </div>
         <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-4 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
+          View More
+        </button>
       </div>
       {/* Disclaimer Section */}
       <div className="flex flex-col items-start bg-slate-100 md:px-14 px-8 py-12 text-center">
-        <h3 className="md:text-2xl text-xl font-bold">
-          #TamilnaduTourism
-        </h3>
-        <p className="text-gray-600 md:text-base text-sm text-left mt-4">
+        <h3 className="md:text-2xl text-xl font-bold">#TamilnaduTourism</h3>
+        <p className="text-gray-600 md:text-base text-sm md:text-left mt-4 text-justify">
           Explore the world and discover the unique charm of Tamil Nadu with
-          #TamilnaduTourism. This project is intended for educational purposes
+          #Tamilnadu Tourism. This project is intended for educational purposes
           only. For more information, please visit:
           <a
-            href="https://www.tamilnadutourism.tn.gov.in/" target="_blank"
-            className="text-orange-600 hover:underline ml-1"
+            href="https://www.tamilnadutourism.tn.gov.in/"
+            target="_blank"
+            className="text-orange-600 hover:underline mx-2"
           >
-            www.tamilnadutourism.tn.gov.in
+            www.tamilnadu tourism.tn.gov.in.
           </a>
-          . All images and content have been sourced from
+          All images and content have been sourced from
           <a
-            href="https://www.tamilnadutourism.tn.gov.in/" target="_blank"
-            className="text-orange-600 hover:underline ml-1"
+            href="https://www.tamilnadutourism.tn.gov.in/"
+            target="_blank"
+            className="text-orange-600 hover:underline mx-2"
           >
-            www.tamilnadutourism.tn.gov.in 
-          </a> 
-          &nbsp;and modified to avoid copyright issues.
+            www.tamilnadu tourism.tn.gov.in
+          </a>
+          and modified to avoid copyright issues.
         </p>
       </div>
       <Footer />
