@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDestinationsOpen, setDestinationsOpen] = useState(false);
-  const [isCategoriesOpen, setCategoriesOpen] = useState(false);
+  const [isTravelPlannerOpen, setTravelPlannerOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTopDestinationsOpen, setTopDestinationsOpen] = useState(false);
+  const [isTopAttractionsOpen, setTopAttractionsOpen] = useState(false);
 
   const [navColor, setNavColor] = useState(false);
 
@@ -46,8 +48,8 @@ const Navbar = () => {
           </div>
 
           {/* Nav Links */}
-          
-            {/* Hamburger Menu (sm) */}
+
+          {/* Hamburger Menu (sm) */}
           <div className="md:hidden mt-3">
             <button
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
@@ -70,15 +72,13 @@ const Navbar = () => {
               onMouseLeave={() => setDestinationsOpen(false)}
             >
               <div className="flex flex-row items-center space-x-1 hover:text-orange-500">
-                <Link to="/destinations">Destinations</Link>
+                Destinations
                 <FaSortDown size={16} />
               </div>
               {isDestinationsOpen && (
                 <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-96 bg-white shadow-lg border border-gray-400 z-10">
-                  
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full h-0 w-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-gray-400"></div>
 
-                
                   <div className="grid grid-cols-2 gap-4 py-2 px-4">
                     {/*Top Destinations */}
                     <div>
@@ -151,15 +151,15 @@ const Navbar = () => {
 
                     {/* Top Attractions */}
                     <div>
-                      <a
-                        href="#"
+                      <Link
+                        to="/attractions"
                         className="block px-4 py-2 font-normal hover:text-orange-600"
                       >
                         <span className="text-orange-500 font-semibold">
                           &#x22EE;
                         </span>{" "}
                         Top Attractions
-                      </a>
+                      </Link>
                       <a
                         href="#"
                         className="block px-4 py-2 font-normal hover:text-orange-600"
@@ -207,7 +207,7 @@ const Navbar = () => {
                         className="block px-4 py-2 font-normal hover:text-orange-600"
                       >
                         <span className="text-orange-500 font-semibold">-</span>{" "}
-                        Palaces
+                        Pilgrim Centres
                       </a>
                       <a
                         href="#"
@@ -223,26 +223,26 @@ const Navbar = () => {
             </div>
             <div
               className="relative"
-              onMouseEnter={() => setCategoriesOpen(true)}
-              onMouseLeave={() => setCategoriesOpen(false)}
+              onMouseEnter={() => setTravelPlannerOpen(true)}
+              onMouseLeave={() => setTravelPlannerOpen(false)}
             >
               <div className="flex flex-row items-center justify-center space-x-1 hover:text-orange-500">
                 <a href="#">Your Trip Guide</a>
                 <FaSortDown size={16} />
               </div>
-              {isCategoriesOpen && (
+              {isTravelPlannerOpen && (
                 <div className="absolute  left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg border border-gray-500 z-10">
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full h-0 w-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-gray-500"></div>
                   <div className="pl-2 py-2">
-                  <a
-                        href="#"
-                        className="block px-4 py-2 font-normal hover:text-orange-600"
-                      >
-                        <span className="text-orange-500 font-semibold">
-                          &#x22EE;
-                        </span>{" "}
-                        Travel Essentials
-                      </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 font-normal hover:text-orange-600"
+                    >
+                      <span className="text-orange-500 font-semibold">
+                        &#x22EE;
+                      </span>{" "}
+                      Travel Essentials
+                    </a>
                     <a
                       href="#"
                       className="block px-4 py-2 font-normal hover:text-orange-600"
@@ -303,154 +303,182 @@ const Navbar = () => {
                 <div className="pl-4">
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                    className="px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300 flex justify-between items-center"
+                    onClick={() =>
+                      setTopDestinationsOpen(!isTopDestinationsOpen)
+                    }
                   >
-                    <span className="text-orange-500 font-semibold">
+                    <Link to="/destinations"><span><span className=" text-orange-500 font-semibold">
                       &#x22EE;
                     </span>{" "}
-                    Popular Destinations
+                    Top Destinations</span></Link><FaSortDown />
                   </a>
+                  {isTopDestinationsOpen && (
+                    <div className="pl-4">
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Ooty
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Kodaikanal
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Kancheepuram
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Kanniakumari
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Mahabalipuram
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Madurai
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Chennai
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Thanjavur
+                      </a>
+                    </div>
+                  )}
+                  
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                    className="px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300 flex justify-between items-center"
+                    onClick={() =>
+                      setTopAttractionsOpen(!isTopAttractionsOpen)
+                    }
                   >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Ooty
+                    <span><span
+                      className="text-orange-500 font-semibold"
+                      
+                    >
+                      &#x22EE;
+                    </span>{" "}
+                    Top Attractions</span><FaSortDown />
                   </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Kodaikanal
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Kancheepuram
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Kanniakumari
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Mahabalipuram
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Madurai
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Chennai
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Thanjavur
-                  </a>
+                  {isTopAttractionsOpen && (
+                    <div className="pl-4">
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Hills
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Beaches
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Wildlife
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Waterfalls
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Museums
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Forts
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Pilgrim Centres
+                      </a>
+                      <a
+                        href="#"
+                        className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                      >
+                        <span className="text-orange-500 font-semibold">-</span>{" "}
+                        Lakes
+                      </a>
+                    </div>
+                    )}
                 </div>
               )}
             </div>
             <div className="relative">
               <button
-                onClick={() => setCategoriesOpen(!isCategoriesOpen)}
+                onClick={() => setTravelPlannerOpen(!isTravelPlannerOpen)}
                 className="w-full flex justify-between items-center px-3 py-2 rounded-md text-xs font-medium text-gray-800 hover:bg-orange-300 focus:outline-none"
               >
-                Categories
+                Your Trip Guide
                 <FaSortDown />
               </button>
-              {isCategoriesOpen && (
-                <div className="pl-4">
+              {isTravelPlannerOpen && (
+                <div className="pl-2">
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                    className="block px-4 py-2 font-normal hover:text-orange-600"
                   >
                     <span className="text-orange-500 font-semibold">
                       &#x22EE;
                     </span>{" "}
-                    All Categories
+                    Travel Essentials
                   </a>
                   <a
                     href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
+                    className="block px-4 py-2 font-normal hover:text-orange-600"
                   >
                     <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Hills
+                    Travel Tips
                   </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Beaches
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Wildlife
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Waterfalls
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Museums
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Forts
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Palace
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Monuments
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300"
-                  >
-                    <span className="text-orange-500 font-semibold">-</span>{" "}
-                    Lakes
-                  </a>
+                  {/* Add more TravelPlanner here */}
                 </div>
               )}
             </div>
