@@ -349,7 +349,7 @@ const About = () => {
           </div>
         </div>
         <div className="mt-12 text-center">
-          <p className="md:text-base text-sm text-gray-600">
+          <p className="md:text-sm text-xs text-gray-600">
             This site is for educational purposes. To <br className="md:hidden block" />view more imformations of
             TamilNadu, <br className="md:hidden block" />visit{" "}
             <a

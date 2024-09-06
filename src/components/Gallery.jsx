@@ -312,7 +312,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className="mt-12 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="md:text-sm text-xs text-gray-600">
             This site is for educational purposes. To view more images of Tamil
             Nadu, visit{" "}
             <a
