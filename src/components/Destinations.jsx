@@ -24,41 +24,35 @@ const Destinations = () => {
         "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
     },
     {
-      name: "Chennai",
-      src: "./src/assets/destinations/Chennai.webp",
+      name: "Kodaikanal",
+      src: "./src/assets/destinations/Kodaikanal.webp",
       content:
-        "Chennai, capital of Tamil Nadu is a cultural hub of South India. It houses some of the most beautiful heritage monuments, pristine beaches, churches, theme parks and universities..",
+        "Kodaikanal is a serene hill station known for its lush greenery, misty weather, and scenic spots like the Kodaikanal Lake and Coaker's Walk. It is often referred to as the 'Princess of Hill Stations'.",
     },
     {
-      name: "Madurai",
-      src: "./src/assets/destinations/Madurai.webp",
+      name: "Kancheepuram",
+      src: "./src/assets/destinations/Kancheepuram.webp",
       content:
-        "It is the oldest city of Tamil Nadu which is very popular for its iconic temple of Meenakshi sundareshwarar. Devotees from all over the world come to seek divine blessings. ",
+        "Kancheepuram, also known as the 'City of Thousand Temples', is famous for its magnificent temples and traditional silk sarees. It holds a significant place in South Indian history and culture.",
     },
     {
-      name: "Ooty",
-      src: "./src/assets/destinations/Ooty.webp",
-      content:
-        "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
+      name: "Kanyakumari",
+      src: "./src/assets/destinations/Kanyakumari.jpg",
+      content:"Kanniakumari, the southernmost tip of India, is where the Indian Ocean, Bay of Bengal, and Arabian Sea meet. It's famous for sunrise, sunset views, and the Vivekananda Rock Memorial.",
     },
     {
-      name: "Chennai",
-      src: "./src/assets/destinations/Chennai.webp",
+      name: "Mahabalipuram",
+      src: "./src/assets/destinations/mahabalipuram.webp",
       content:
-        "Chennai, capital of Tamil Nadu is a cultural hub of South India. It houses some of the most beautiful heritage monuments, pristine beaches, churches, theme parks and universities..",
+        "Mahabalipuram is a coastal town famous for its UNESCO World Heritage-listed monuments, rock-cut temples, and sculptures, including the Shore Temple and the Descent of the Ganges.",
     },
     {
-      name: "Madurai",
-      src: "./src/assets/destinations/Madurai.webp",
+      name: "Thanjavur",
+      src: "./src/assets/destinations/thanjavur.webp",
       content:
-        "It is the oldest city of Tamil Nadu which is very popular for its iconic temple of Meenakshi sundareshwarar. Devotees from all over the world come to seek divine blessings. ",
+        "Thanjavur is renowned for the grand Brihadeeswarar Temple, a UNESCO World Heritage site. The city is also known for its Tanjore paintings and classical music heritage.",
     },
-    {
-      name: "Ooty",
-      src: "./src/assets/destinations/Ooty.webp",
-      content:
-        "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
-    },
+    
   ];
 
   useEffect(() => {
@@ -87,6 +81,21 @@ const Destinations = () => {
           ))}
         </div>
       </div>
+      <div className="mb-12 text-center">
+          <p className="md:text-sm text-xs text-gray-600">
+            This site is for educational purposes. To <br className="md:hidden block" />view more imformations of
+            TamilNadu, <br className="md:hidden block" />visit{" "}
+            <a
+              href="https://www.tamilnadutourism.tn.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              www.tamilnadutourism.tn.gov.in
+            </a>
+            .
+          </p>
+        </div>
       <Footer />
     </>
   );
