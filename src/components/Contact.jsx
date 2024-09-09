@@ -13,7 +13,7 @@ const Contact = () => {
               Thanks For Looking!
             </h1>
             <p className="text-gray-600 mb-4">
-              I'm Ravikumar, the front-end developer behind this website. As a
+              I'm <a href="https://www.linkedin.com/in/imravira/" target="blank" className="text-blue-500">Ravikumar</a>, the front-end developer behind this website. As a
               newcomer to the field, I’ve been diving into web development with
               a lot of enthusiasm and a desire to learn and grow. This project,
               the Vazhipokkan Tamil Nadu travel guide website, is a great

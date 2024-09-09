@@ -16,11 +16,11 @@ const About = () => {
         <img className="w-full md:h-screen h-80" src={CoverImage} alt="" />
       </div>
       <div className="bg-white md:px-16 px-8 py-12 text-gray-800">
-        <h2 className="md:text-2xl text-xl text-center font-bold mb-6">
+        <h2 className="md:text-2xl text-xl text-center font-extrabold mb-6">
           About Tamil Nadu Tourism
         </h2>
         <div className="mb-12">
-          <h3 className="md:text-2xl text-xl font-semibold mb-4">
+          <h3 className="md:text-2xl text-xl font-bold mb-4">
             Welcome to Tamil Nadu!
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -49,7 +49,7 @@ const About = () => {
         </div>
 
         <div className="mb-12">
-          <h3 className="md:text-2xl text-xl font-semibold mb-4">
+          <h3 className="md:text-2xl text-xl font-bold mb-4">
             Tamil Nadu - Pilgrimage Paradise
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -96,7 +96,7 @@ const About = () => {
         </div>
 
         <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-semibold mb-4">
+          <h3 className="md:text-2xl text-xl  font-bold mb-4">
             Natural Beauty of Tamil Nadu
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -134,7 +134,7 @@ const About = () => {
         </div>
 
         <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-semibold mb-4">
+          <h3 className="md:text-2xl text-xl  font-bold mb-4">
             Culture and Heritage - Discover the Ancient Past of Tamil Nadu
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -169,7 +169,7 @@ const About = () => {
         </div>
 
         <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-semibold text-gray-800 mb-6">
+          <h3 className="md:text-2xl text-xl  font-bold text-gray-800 mb-6">
             Most Visited Attractions & Tourist Places in Tamil Nadu
           </h3>
           <ul className="space-y-4 text-gray-700 text-sm md:text-base list-inside">
@@ -245,7 +245,7 @@ const About = () => {
         </div>
 
         <div>
-          <h3 className="md:text-2xl text-xl font-semibold mb-4">
+          <h3 className="md:text-2xl text-xl font-bold mb-4">
             Quick Facts About Tamil Nadu
           </h3>
           <div className="overflow-x-auto">
