@@ -3,20 +3,67 @@ import Navbar from "../Navbar";
 import ImageSlider from "./ImageSlider";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Footer from "../Footer";
+import MarinaBeach from "../../assets/imageslider/marina.webp";
+import BragadeeshwararTemple from "../../assets/imageslider/Bragadeeshwarar-temple.webp";
+import MukurthiNationalPark from "../../assets/imageslider/Mukurthi-national-park.webp";
+import OotyHills from "../../assets/imageslider/Ooty.webp";
+import Narthamalai from "../../assets/gallery/narthamalai.webp";
+import DhanushKodi from "../../assets/gallery/dhanushkodi.webp";
+import MudumalaiWildlife from "../../assets/gallery/mudumalai.webp";
+import HogenakkalFalls from "../../assets/gallery/hogenakkal.webp";
+import GandhiMemorialMuseum from "../../assets/gallery/gandhi-memorial-museum.webp";
+import ThirumayamFort from "../../assets/gallery/thirumayam-fort-pudukottai.webp";
+import MeenakshiAmmanTemple from "../../assets/gallery/meenakshi-amman-temple.webp";
+import PykaraLake from "../../assets/gallery/pykara-lake.webp";
+import PanpoliThirumalaiKovil from "../../assets/gallery/panpoli-thirumalai-kovil.webp";
+import EnnoreBeach from "../../assets/gallery/ennore.webp";
+import AnaimalaiTigerReserve from "../../assets/gallery/anaimalai-tiger-reserve.webp";
+import AgathiyarFalls from "../../assets/gallery/agathiyar-falls.webp";
+import GovernmentMuseumVellore from "../../assets/gallery/government-museum-vellore.webp";
+import ThiruchirapalliRockFort from "../../assets/gallery/tiruchirapalli-rock-fort.webp";
+import ThanjavurPeriyaKovil from "../../assets/gallery/thanjavur-periya-kovil.webp";
+import AvalancheLake from "../../assets/gallery/avalanche-lake.webp";
+import NilgiriHills from "../../assets/gallery/the-nilgiri-mountain-railway.webp";
+import KanyakumariBeach from "../../assets/gallery/thiruvalluvar.webp";
+import ViralimalaiPeacockSanctuary from "../../assets/gallery/viralimalai-peacock-sanctuary.webp";
+import ManimutharFalls from "../../assets/gallery/manimuthar-falls.webp";
+import VictoriaHall from "../../assets/gallery/victoria-hall.webp";
+import RanjankuudiFort from "../../assets/gallery/ranjankudi-fort.webp";
+import PalaniMuruganKovil from "../../assets/gallery/dhandayuthapani-swamy-temple-palani.webp";
+import OotyLake from "../../assets/gallery/ootty-lake.webp";
+import Balamathi from "../../assets/gallery/balamathi.webp";
+import TharangambadiBeach from "../../assets/gallery/tharangambadi.webp";
+import PulicatLakeBirdSanctuary from "../../assets/gallery/pulicat-lake-bird-sanctuary.webp";
+import PykaraFalls from "../../assets/gallery/pykara-waterfalls.webp";
+import VivekanandaHouseandMuseum from "../../assets/gallery/vivekananda-museum.webp";
+import AthiyamanFort from "../../assets/gallery/athiyaman-fort.webp";
+import VelankanniCourch from "../../assets/gallery/velankanni.webp";
+import SembakkamLake from "../../assets/gallery/sembakkam-lake.webp";
+import Kolukkumalai from "../../assets/gallery/kolukkumalai.webp";
+import PondicherryRockBeach from "../../assets/gallery/pondicherry-rock-beach.webp";
+import KodaikanalwildlifeSanctuary from "../../assets/gallery/kodaikanal-wildlife-sanctuary.webp";
+import CourtallamFiveFalls from "../../assets/gallery/courtallam-five-falls.webp";
+import TamilnaduPoliceMuseum from "../../assets/gallery/police-museum.webp";
+import DindigulFort from "../../assets/gallery/dindigul-fort.webp";
+import RameswaramTemple from "../../assets/gallery/rameswaram-temple.webp";
+import VeeranamLake from "../../assets/gallery/veeranam-lake.webp";
 
 const Gallery = () => {
   const galleryImages = [
-    { name: "Marina Beach", src: "./src/assets/imageslider/marina.webp" },
+    { name: "Marina Beach", src: MarinaBeach, },
     {
       name: "Bragadeeshwarar Temple",
-      src: "./src/assets/imageslider/Bragadeeshwarar-temple.webp",
+      src: BragadeeshwararTemple,
     },
-    { name: "Hogenakkal Falls", src: "./src/assets/imageslider/Hogenakkal.webp" },
+    {
+      name: "Hogenakkal Falls",
+      src: HogenakkalFalls,
+    },
     {
       name: "Mukurthi National Park",
-      src: "./src/assets/imageslider/Mukurthi-national-park.webp",
+      src: MukurthiNationalPark,
     },
-    { name: "Ooty Hills", src: "./src/assets/imageslider/Ooty.webp" },
+    { name: "Ooty Hills", src: OotyHills, },
   ];
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,202 +84,242 @@ const Gallery = () => {
     {
       name: "Narthamalai",
       category: "Hills",
-      src: "./src/assets/gallery/narthamalai.webp",
+      src: Narthamalai,
+      route: "*",
     },
     {
       name: "Dhanush Kodi",
       category: "Beaches",
-      src: "./src/assets/gallery/dhanushkodi.webp",
+      src: DhanushKodi,
+      route: "*",
     },
     {
       name: "Mudumalai Wildlife",
       category: "Wildlife",
-      src: "./src/assets/gallery/mudumalai.webp",
+      src: MudumalaiWildlife,
+      route: "*",
     },
     {
       name: "Hogenakkal Falls",
       category: "Waterfalls",
-      src: "./src/assets/gallery/hogenakkal.webp",
+      src: HogenakkalFalls,
+      route: "*",
     },
     {
       name: "Gandhi Memorial Museum",
       category: "Museums",
-      src: "./src/assets/gallery/gandhi-memorial-museum.webp",
+      src: GandhiMemorialMuseum,
+      route: "*",
     },
     {
       name: "Thirumayam Fort, Pudukottai",
       category: "Forts",
-      src: "./src/assets/gallery/thirumayam-fort-pudukottai.webp",
+      src: ThirumayamFort,
+      route: "*",
     },
     {
       name: "Meenakshi Amman Temple",
       category: "Pilgrim Centres",
-      src: "./src/assets/gallery/meenakshi-amman-temple.webp",
+      src: MeenakshiAmmanTemple,
+      route: "*",
     },
     {
       name: "Pykara Lake",
       category: "Lakes",
-      src: "./src/assets/gallery/pykara-lake.webp",
+      src: PykaraLake,
+      route: "*",
     },
     {
       name: "Panpoli Thirumalai Kovil",
       category: "Hills",
-      src: "./src/assets/gallery/panpoli-thirumalai-kovil.webp",
+      src: PanpoliThirumalaiKovil,
+      route: "*",
     },
     {
       name: "Ennore Beach",
       category: "Beaches",
-      src: "./src/assets/gallery/ennore.webp",
+      src: EnnoreBeach,
+      route: "*",
     },
     {
-      name: "Anaimalai Tiger  Reserve",
+      name: "Anaimalai Tiger Reserve",
       category: "Wildlife",
-      src: "./src/assets/gallery/anaimalai-tiger-reserve.webp",
+      src: AnaimalaiTigerReserve,
+      route: "*",
     },
     {
       name: "Agathiyar Falls",
       category: "Waterfalls",
-      src: "./src/assets/gallery/agathiyar-falls.webp",
+      src: AgathiyarFalls,
+      route: "*",
     },
     {
       name: "Government Museum, Vellore",
       category: "Museums",
-      src: "./src/assets/gallery/government-museum-vellore.webp",
+      src: GovernmentMuseumVellore,
+      route: "*",
     },
     {
       name: "Thiruchirapalli Rock Fort",
       category: "Forts",
-      src: "./src/assets/gallery/tiruchirapalli-rock-fort.webp",
+      src: ThiruchirapalliRockFort,
+      route: "*",
     },
     {
       name: "Thanjavur Periya Kovil",
       category: "Pilgrim Centres",
-      src: "./src/assets/gallery/thanjavur-periya-kovil.webp",
+      src: ThanjavurPeriyaKovil,
+      route: "*",
     },
     {
       name: "Avalanche Lake",
       category: "Lakes",
-      src: "./src/assets/gallery/avalanche-lake.webp",
+      src: AvalancheLake,
+      route: "*",
     },
     {
       name: "Nilgiri Hills",
       category: "Hills",
-      src: "./src/assets/gallery/the-nilgiri-mountain-railway.webp",
+      src: NilgiriHills,
+      route: "*",
     },
     {
-      name: "Kanya Kumari Beach",
+      name: "Kanyakumari Beach",
       category: "Beaches",
-      src: "./src/assets/gallery/kanyakumari.webp",
+      src: KanyakumariBeach,
+      route: "*",
     },
     {
       name: "Viralimalai Peacock Sanctuary",
       category: "Wildlife",
-      src: "./src/assets/gallery/viralimalai-peacock-sanctuary.webp",
+      src: ViralimalaiPeacockSanctuary,
+      route: "*",
     },
     {
       name: "Manimuthar Falls",
       category: "Waterfalls",
-      src: "./src/assets/gallery/manimuthar-falls.webp",
+      src: ManimutharFalls,
+      route: "*",
     },
     {
       name: "Victoria Hall",
       category: "Museums",
-      src: "./src/assets/gallery/victoria-hall.webp",
+      src: VictoriaHall,
+      route: "*",
     },
     {
-      name: "ranjankuudi Fort",
+      name: "Ranjankuudi Fort",
       category: "Forts",
-      src: "./src/assets/gallery/ranjankudi-fort.webp",
+      src: RanjankuudiFort,
+      route: "*",
     },
     {
       name: "Palani Murugan Kovil",
       category: "Pilgrim Centres",
-      src: "./src/assets/gallery/dhandayuthapani-swamy-temple-palani.webp",
+      src: PalaniMuruganKovil,
+      route: "*",
     },
     {
       name: "Ooty Lake",
       category: "Lakes",
-      src: "./src/assets/gallery/ootty-lake.webp",
+      src: OotyLake,
+      route: "*",
     },
     {
       name: "Balamathi",
       category: "Hills",
-      src: "./src/assets/gallery/balamathi.webp",
+      src: Balamathi,
+      route: "*",
     },
     {
       name: "Tharangambadi Beach",
       category: "Beaches",
-      src: "./src/assets/gallery/tharangambadi.webp",
+      src: TharangambadiBeach,
+      route: "*",
     },
     {
       name: "Pulicat Lake Bird Sanctuary",
       category: "Wildlife",
-      src: "./src/assets/gallery/pulicat-lake-bird-sanctuary.webp",
+      src: PulicatLakeBirdSanctuary,
+      route: "*",
     },
     {
       name: "Pykara Falls",
       category: "Waterfalls",
-      src: "./src/assets/gallery/pykara-waterfalls.webp",
+      src: PykaraFalls,
+      route: "*",
     },
     {
       name: "Vivekananda House and Museum",
       category: "Museums",
-      src: "./src/assets/gallery/vivekananda-museum.webp",
+      src: VivekanandaHouseandMuseum,
+      route: "*",
     },
     {
       name: "Athiyaman Fort",
       category: "Forts",
-      src: "./src/assets/gallery/athiyaman-fort.webp",
+      src: AthiyamanFort,
+      route: "*",
     },
     {
       name: "Velankanni Courch",
       category: "Pilgrim Centres",
-      src: "./src/assets/gallery/velankanni.webp",
+      src: VelankanniCourch,
+      route: "*",
     },
     {
       name: "Sembakkam Lake",
       category: "Lakes",
-      src: "./src/assets/gallery/sembakkam-lake.webp",
+      src: SembakkamLake,
+      route: "*",
     },
     {
       name: "Kolukkumalai",
       category: "Hills",
-      src: "./src/assets/gallery/kolukkumalai.webp",
+      src: Kolukkumalai,
+      route: "*",
     },
     {
       name: "Pondicherry Rock Beach",
       category: "Beaches",
-      src: "./src/assets/gallery/pondicherry-rock-beach.webp",
+      src: PondicherryRockBeach,
+      route: "*",
     },
     {
-      name: "Kodaikanal Wildlife Sanctuary",
+      name: "Kodaikanal wildlife Sanctuary",
       category: "Wildlife",
-      src: "./src/assets/gallery/kodaikanal-wildlife-sanctuary.webp",
+      src: KodaikanalwildlifeSanctuary,
+      route: "*",
     },
     {
       name: "Courtallam Five Falls",
       category: "Waterfalls",
-      src: "./src/assets/gallery/courtallam-five-falls.webp",
+      src: CourtallamFiveFalls,
+      route: "*",
     },
     {
       name: "Tamilnadu Police Museum",
       category: "Museums",
-      src: "./src/assets/gallery/police-museum.webp",
+      src: TamilnaduPoliceMuseum,
+      route: "*",
     },
     {
       name: "Dindigul Fort",
       category: "Forts",
-      src: "./src/assets/gallery/dindigul-fort.webp",
+      src: DindigulFort,
+      route: "*",
     },
     {
       name: "Rameswaram Temple",
       category: "Pilgrim Centres",
-      src: "./src/assets/gallery/rameswaram-temple.webp",
+      src: RameswaramTemple,
+      route: "*",
     },
     {
       name: "Veeranam Lake",
       category: "Lakes",
-      src: "./src/assets/gallery/veeranam-lake.webp",
+      src: VeeranamLake,
+      route: "*",
     },
   ];
 
@@ -241,9 +328,9 @@ const Gallery = () => {
       ? images
       : images.filter((image) => image.category === selectedCategory);
 
-      useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
