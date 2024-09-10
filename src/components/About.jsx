@@ -34,7 +34,7 @@ const About = () => {
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
             Explore the spiritual aura of its countless temples, relax on serene
             beaches and in peaceful hill stations, and experience the vitality
-            of its diverse wildlife sanctuaries and national parks. The state's
+            of its diverse wildlife sanctuaries and national parks. The state&apos;s
             vibrant festivals, traditional art forms, and bustling markets add
             to its unique charm. Whether you're seeking spiritual fulfillment,
             natural beauty, or cultural richness, Tamil Nadu offers an

@@ -12,23 +12,34 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import DestinationCard from "./Destinations/DescriptionCard";
+import PongalFestival from "../assets/imageslider/pongal-festival.webp";
+import ChithiraiFestivalMadurai from "../assets/imageslider/Chithirai-Festival-Madurai.webp";
+import ThiruvalluvarStatue from "../assets/imageslider/thiruvalluvar.webp";
+import Jallikattu from "../assets/imageslider/jallikattu.webp";
+import Therukooth from "../assets/imageslider/therukooth.webp";
+import Chennai from "../assets/destinations/Chennai.webp";
+import Madurai from "../assets/destinations/Madurai.webp";
+import Ooty from "../assets/destinations/Ooty.webp";
+import Hills from "../assets/gallery/the-nilgiri-mountain-railway.webp";
+import Beachs from "../assets/gallery/dhanushkodi.webp";
+import Wildlife from "../assets/gallery/mudumalai.webp";
 
 const Home = () => {
   const homeImages = [
     {
       name: "Pongal Festival",
-      src: "./src/assets/imageslider/pongal-festival.webp",
+      src: PongalFestival,
     },
     {
       name: "Chithirai Festival Madurai",
-      src: "./src/assets/imageslider/Chithirai-Festival-Madurai.webp",
+      src: ChithiraiFestivalMadurai,
     },
-    { name: "Jallikattu", src: "./src/assets/imageslider/jallikattu.webp" },
+    { name: "Jallikattu", src: Jallikattu },
     {
-      name: "Thiruvalluvar Steel Statue, Coimbutore",
-      src: "./src/assets/imageslider/thiruvalluvar.webp",
+      name: "Thiruvalluvar Statue",
+      src: ThiruvalluvarStatue,
     },
-    { name: "Therukooth", src: "./src/assets/imageslider/therukooth.webp" },
+    { name: "Therukooth", src: Therukooth },
   ];
 
   const travelOptions = [
@@ -55,19 +66,19 @@ const Home = () => {
   const placesToVisit = [
     {
       name: "Chennai",
-      src: "./src/assets/destinations/Chennai.webp",
+      src: Chennai,
       content:
         "Chennai, capital of Tamil Nadu is a cultural hub of South India. It houses some of the most beautiful heritage monuments, pristine beaches, churches, theme parks and universities..",
     },
     {
       name: "Madurai",
-      src: "./src/assets/destinations/Madurai.webp",
+      src: Madurai,
       content:
         "It is the oldest city of Tamil Nadu which is very popular for its iconic temple of Meenakshi sundareshwarar. Devotees from all over the world come to seek divine blessings. ",
     },
     {
       name: "Ooty",
-      src: "./src/assets/destinations/Ooty.webp",
+      src: Ooty,
       content:
         "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
     },
@@ -75,19 +86,19 @@ const Home = () => {
   const TopAttractions = [
     {
       name: "Hills",
-      src: "./src/assets/gallery/the-nilgiri-mountain-railway.webp",
+      src: Hills,
       content:
         "Tamil Nadu's hills, like Ooty and Kodaikanal, boast lush landscapes and cool climates. They’re perfect for trekking, boating, and enjoying scenic views.",
     },
     {
       name: "Beachs",
-      src: "./src/assets/gallery/dhanushkodi.webp",
+      src: Beachs,
       content:
         "Tamil Nadu's beaches, such as Marina and Mahabalipuram, feature golden sands and vibrant coastal views. They are ideal for enjoying, and watching spectacular sunsets.",
     },
     {
       name: "Wildlife",
-      src: "./src/assets/gallery/mudumalai.webp",
+      src: Wildlife,
       content:
         "Tamil Nadu's wildlife sanctuaries, such as Mudumalai and Anamalai, showcase diverse wildlife, including elephants and tigers, offering an intimate nature experience.",
     },
@@ -194,11 +205,12 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-        <Link to="/destinations">
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
-        </Link></div>
+          <Link to="/destinations">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+              View More
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Top Attractions in Tamil Nadu Section */}
@@ -224,11 +236,12 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-        <Link to="/attractions">
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
-        </Link></div>
+          <Link to="/attractions">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+              View More
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* How to Reach Tamil Nadu Section */}
@@ -263,11 +276,12 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-        <Link to="/travel-essentials">
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
-        </Link></div>
+          <Link to="/travel-essentials">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+              View More
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Best Time to Visit Tamil Nadu Section */}
@@ -302,11 +316,12 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-        <Link to="/travel-essentials">
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-            View More
-          </button>
-        </Link></div>
+          <Link to="/travel-essentials">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+              View More
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Disclaimer Section */}
