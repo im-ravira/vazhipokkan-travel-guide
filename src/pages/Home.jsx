@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import {
   FaBus,
   FaCloudRain,
@@ -7,11 +6,11 @@ import {
   FaSun,
   FaTrain,
 } from "react-icons/fa";
-import ImageSlider from "./Gallery/ImageSlider";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import ImageSlider from "../components/common/ImageSlider";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import DestinationCard from "./Destinations/DescriptionCard";
+import DestinationCard from "../components/common//DescriptionCard";
 import PongalFestival from "../assets/imageslider/pongal-festival.webp";
 import ChithiraiFestivalMadurai from "../assets/imageslider/Chithirai-Festival-Madurai.webp";
 import ThiruvalluvarStatue from "../assets/imageslider/thiruvalluvar.webp";
@@ -206,7 +205,7 @@ const Home = () => {
         </div>
         <div className="flex items-center justify-center">
           <Link to="/destinations">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
               View More
             </button>
           </Link>
@@ -237,7 +236,7 @@ const Home = () => {
         </div>
         <div className="flex items-center justify-center">
           <Link to="/attractions">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            <button className="bg-orange-600 text-white text-nowrap md:text-sm text-xs font-bold py-2 md:px-6 px-16 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
               View More
             </button>
           </Link>
@@ -277,7 +276,7 @@ const Home = () => {
         </div>
         <div className="flex items-center justify-center">
           <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
               View More
             </button>
           </Link>
@@ -317,7 +316,7 @@ const Home = () => {
         </div>
         <div className="flex items-center justify-center">
           <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-20 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
               View More
             </button>
           </Link>
@@ -336,7 +335,7 @@ const Home = () => {
             target="_blank"
             className="text-orange-600 hover:underline mx-2"
           >
-            www.tamilnadu tourism.tn.gov.in.
+            tamilnadutourism.tn.gov.in .
           </a>
           All images and content have been sourced from
           <a
@@ -344,7 +343,7 @@ const Home = () => {
             target="_blank"
             className="text-orange-600 hover:underline mx-2"
           >
-            www.tamilnadu tourism.tn.gov.in
+            tamilnadutourism.tn.gov.in
           </a>
           and modified to avoid copyright issues.
         </p>

@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import DestinationCard from "./DescriptionCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import DestinationCard from "../components/common/DescriptionCard";
 import { Link } from "react-router-dom";
-import Chennai from "../../assets/destinations/Chennai.webp";
-import Madurai from "../../assets/destinations/Madurai.webp";
-import Ooty from "../../assets/destinations/Ooty.webp";
-import Kodaikanal from "../../assets/destinations/Kodaikanal.webp";
-import Kancheepuram from "../../assets/destinations/Kancheepuram.webp";
-import Kanyakumari from "../../assets/destinations/Kanyakumari.webp";
-import Mahabalipuram from "../../assets/destinations/Mahabalipuram.webp";
-import Thanjavur from "../../assets/destinations/Thanjavur.webp";
+import Chennai from "../assets/destinations/Chennai.webp";
+import Madurai from "../assets/destinations/Madurai.webp";
+import Ooty from "../assets/destinations/Ooty.webp";
+import Kodaikanal from "../assets/destinations/Kodaikanal.webp";
+import Kancheepuram from "../assets/destinations/Kancheepuram.webp";
+import Kanyakumari from "../assets/destinations/Kanyakumari.webp";
+import Mahabalipuram from "../assets/destinations/Mahabalipuram.webp";
+import Thanjavur from "../assets/destinations/Thanjavur.webp";
 
 const Destinations = () => {
   const destinations = [

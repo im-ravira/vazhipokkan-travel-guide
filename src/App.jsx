@@ -1,14 +1,13 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Gallery from "./components/Gallery/Gallery";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Destinations from "./components/Destinations/Destinations";
-import TopAttractions from "./components/Destinations/TopAttractions";
-import MaintenancePage from "./components/MaintenancePage";
-import TravelEssentials from "./components/TravelGuide/TravelEssentials";
-import Map from "./components/TravelGuide/Map";
+import Home from "./pages/Home";
+import Gallery from "./pages/Gallery";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Destinations from "./pages/TopDestinations";
+import TopAttractions from "./pages/TopAttractions";
+import MaintenancePage from "./pages/MaintenancePage";
+import TravelEssentials from "./pages/TravelEssentials";
+import Map from "./pages/Map";
 
 
 const App = () => {
@@ -23,7 +22,6 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/pagenotfound" element={<MaintenancePage />} />
         <Route path="*" element={<MaintenancePage />} />
       </Routes>
     </Router>

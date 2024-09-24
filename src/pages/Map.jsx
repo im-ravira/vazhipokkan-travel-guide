@@ -1,7 +1,6 @@
 import React from "react";
-import { GoogleMap, LoadScript } from "@react-google-maps/api";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const MapPage = () => {
