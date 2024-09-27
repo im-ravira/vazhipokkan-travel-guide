@@ -1,27 +1,16 @@
-import {
-  FaBus,
-  FaCloudRain,
-  FaPlane,
-  FaSnowflake,
-  FaSun,
-  FaTrain,
-} from "react-icons/fa";
 import ImageSlider from "../components/common/ImageSlider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import DestinationCard from "../components/common//DescriptionCard";
 import PongalFestival from "../assets/imageslider/pongal-festival.webp";
 import ChithiraiFestivalMadurai from "../assets/imageslider/Chithirai-Festival-Madurai.webp";
 import ThiruvalluvarStatue from "../assets/imageslider/thiruvalluvar.webp";
 import Jallikattu from "../assets/imageslider/jallikattu.webp";
 import Therukooth from "../assets/imageslider/therukooth.webp";
-import Chennai from "../assets/destinations/Chennai.webp";
-import Madurai from "../assets/destinations/Madurai.webp";
-import Ooty from "../assets/destinations/Ooty.webp";
-import Hills from "../assets/gallery/the-nilgiri-mountain-railway.webp";
-import Beachs from "../assets/gallery/dhanushkodi.webp";
-import Wildlife from "../assets/gallery/mudumalai.webp";
+import TravelOptions from "../components/TravelOptions";
+import TimeToVisit from "../components/TimeToVisit";
+import PlacesToVisit from "../components/PlacesToVisit";
+import TopAttractions from "../components/TopAttractions";
 
 const Home = () => {
   const homeImages = [
@@ -41,111 +30,28 @@ const Home = () => {
     { name: "Therukooth", src: Therukooth },
   ];
 
-  const travelOptions = [
-    {
-      name: "By Air",
-      icon: <FaPlane className="text-orange-600 w-6 h-6" />,
-      content:
-        "There are a total of 9 airports in Tamil Nadu, both domestic and international, connected to major cities through frequent flights.",
-    },
-    {
-      name: "By Train",
-      icon: <FaTrain className="text-orange-600 w-6 h-6" />,
-      content:
-        "All the major cities of Tamil Nadu have good train connectivity with major cities across India, making it an affordable travel option.",
-    },
-    {
-      name: "By Road",
-      icon: <FaBus className="text-orange-600 w-6 h-6" />,
-      content:
-        "Tamil Nadu has good road connectivity with national highways and plenty of bus options from nearby states and cities.",
-    },
-  ];
-
-  const placesToVisit = [
-    {
-      name: "Chennai",
-      src: Chennai,
-      content:
-        "Chennai, capital of Tamil Nadu is a cultural hub of South India. It houses some of the most beautiful heritage monuments, pristine beaches, churches, theme parks and universities..",
-    },
-    {
-      name: "Madurai",
-      src: Madurai,
-      content:
-        "It is the oldest city of Tamil Nadu which is very popular for its iconic temple of Meenakshi sundareshwarar. Devotees from all over the world come to seek divine blessings. ",
-    },
-    {
-      name: "Ooty",
-      src: Ooty,
-      content:
-        "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
-    },
-  ];
-  const TopAttractions = [
-    {
-      name: "Hills",
-      src: Hills,
-      content:
-        "Tamil Nadu's hills, like Ooty and Kodaikanal, boast lush landscapes and cool climates. They’re perfect for trekking, boating, and enjoying scenic views.",
-    },
-    {
-      name: "Beachs",
-      src: Beachs,
-      content:
-        "Tamil Nadu's beaches, such as Marina and Mahabalipuram, feature golden sands and vibrant coastal views. They are ideal for enjoying, and watching spectacular sunsets.",
-    },
-    {
-      name: "Wildlife",
-      src: Wildlife,
-      content:
-        "Tamil Nadu's wildlife sanctuaries, such as Mudumalai and Anamalai, showcase diverse wildlife, including elephants and tigers, offering an intimate nature experience.",
-    },
-  ];
-
-  const bestTimeToVisit = [
-    {
-      name: "Summer in Tamil Nadu",
-      icon: <FaSun className="text-yellow-500 w-6 h-6" />,
-      content:
-        "The summer in Tamil Nadu starts from March and ends in May. The temperature may rise up to 40°C. However, the hill stations in Tamil Nadu during summer are the best places to visit to escape the heat of plains.",
-    },
-    {
-      name: "Monsoon in Tamil Nadu",
-      icon: <FaCloudRain className="text-blue-500 w-6 h-6" />,
-      content:
-        "Monsoon starts from June and ends in September. The weather will be humid due to heavy downpours. It is not a favorable time to visit Tamil Nadu. The temperature ranges between 24ºC and 30ºC.",
-    },
-    {
-      name: "Winter in Tamil Nadu",
-      icon: <FaSnowflake className="text-blue-300 w-6 h-6" />,
-      content:
-        "Winter in Tamil Nadu starts from October and ends in February. This season is very favorable to visit for sightseeing and having an amazing beach holiday. The temperature ranges from 21ºC to 30ºC.",
-    },
-  ];
-
   return (
-    <>
+    <main className="min-h-screen">
       <Navbar />
       <ImageSlider images={homeImages} autoPlay={true} Overlay={true} />
-      <div className="text-center bg-slate-100 md:px-12 px-8 py-12">
-        <h2 className="md:text-2xl text-xl font-extrabold text-gray-800 mb-6">
+      <section className="text-center bg-slate-100 py-12">
+        <h1 className="text-[1.6rem] md:text-[1.6rem] lg:text-[2rem] font-extrabold text-gray-800 mb-2 lg:mb-4">
           Welcome to <span className="text-orange-600">Vazhipokkan</span>
           <br className="md:hidden block" /> - Tamil Nadu Tourism
-        </h2>
-        <p className="md:text-base text-sm text-gray-700 md:text-center text-justify md:px-38 px-3">
+        </h1>
+        <p className="md:text-[1.1rem] text-sm lg:text-[1.3rem] lg:leading-7 md:leading-6 leading-normal font-light text-gray-700 text-center md:px-38 px-8">
           Experience the invigorating charm of Tamil Nadu, the cultural capital
           of India. <br className="md:block hidden" /> Dive into its rich
-          heritage and vibrant traditions with our detailed guide.
+          heritage and vibrant traditions with our Comprehensive guide.
         </p>
-      </div>
+      </section>
 
       {/* About Tamil Nadu Tourism Section */}
-      <div className="flex flex-col justify-start text-left bg-white md:px-16 px-8 py-12">
-        <h2 className="md:text-2xl text-xl font-bold text-gray-800 mb-6">
+      <section className="flex flex-col justify-start text-left bg-white md:px-16 px-8 py-12">
+        <h2 className="text-[1.15rem] md:text-2xl lg:text-3xl font-bold text-gray-800 mb-6">
           About Tamil Nadu Tourism
         </h2>
-        <div>
+        <article>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify">
             Welcome to Tamil Nadu! A land where the echoes of ancient dynasties
             like the Cholas, Pandyas, and Pallavas still resonate, and where
@@ -169,7 +75,7 @@ const Home = () => {
             one of India's top tourist destinations, promising something special
             at every turn.
           </p>
-        </div>
+        </article>
         <div className="flex justify-start text-center mt-8">
           <Link to="/about">
             <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
@@ -177,165 +83,26 @@ const Home = () => {
             </button>
           </Link>
         </div>
-      </div>
-
-      {/* Best Places to Visit in Tamil Nadu Section */}
-      <div className="flex flex-col bg-white md:px-16 px-8 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
-            Best Places to Visit in Tamil Nadu
-          </h2>
-          <Link to="/destinations">
-            <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
-              View More
-            </button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {placesToVisit.map((place, index) => (
-            <DestinationCard
-              key={index}
-              name={place.name}
-              src={place.src}
-              content={place.content}
-              additionalClasses="md:w-full lg:w-full p-1"
-            />
-          ))}
-        </div>
-        <div className="flex items-center justify-center">
-          <Link to="/destinations">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-              View More
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      {/* Top Attractions in Tamil Nadu Section */}
-      <div className="flex flex-col bg-white md:px-16 px-8 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
-            Top Attractions in Tamil Nadu Section
-          </h2>
-          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6  rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
-            View More
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-2">
-          {TopAttractions.map((place, index) => (
-            <DestinationCard
-              key={index}
-              name={place.name}
-              src={place.src}
-              content={place.content}
-              additionalClasses="md:w-full lg:w-full p-0"
-            />
-          ))}
-        </div>
-        <div className="flex items-center justify-center">
-          <Link to="/attractions">
-            <button className="bg-orange-600 text-white text-nowrap md:text-sm text-xs font-bold py-2 md:px-6 px-16 rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-              View More
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      {/* How to Reach Tamil Nadu Section */}
-      <div className="flex flex-col bg-white md:px-16 px-8 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
-            How to Reach Tamil Nadu?
-          </h2>
-          <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
-              View More
-            </button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {travelOptions.map((option, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 p-10 rounded-lg shadow-md flex flex-col items-start"
-            >
-              <div className="flex flex-row items-center gap-3">
-                {option.icon}
-                <h3 className="md:text-lg text-base mt-4 font-bold text-gray-800 mb-2">
-                  {option.name}
-                </h3>
-              </div>
-              <p className="text-gray-700 text-left md:text-base text-sm">
-                {option.content}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-center">
-          <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-              View More
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      {/* Best Time to Visit Tamil Nadu Section */}
-      <div className="flex flex-col bg-white md:px-16 px-8 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-gray-800">
-            Best Time to Visit Tamil Nadu
-          </h2>
-          <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-4 rounded-full hover:bg-orange-700 transition duration-300 md:block hidden ">
-              View More
-            </button>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-start gap-6">
-          {bestTimeToVisit.map((season, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-start bg-white border border-gray-200 p-8 rounded-lg shadow-md"
-            >
-              <div className="flex flex-row items-center gap-3">
-                {season.icon}
-                <h3 className="md:text-lg text-base font-bold text-gray-800 mt-4 mb-2">
-                  {season.name}
-                </h3>
-              </div>
-              <p className="text-gray-700 md:text-base text-sm text-left">
-                {season.content}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="flex items-center justify-center">
-          <Link to="/travel-essentials">
-            <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
-              View More
-            </button>
-          </Link>
-        </div>
-      </div>
-
+      </section>
+      <PlacesToVisit />
+      <TopAttractions />
+      <TravelOptions />
+      <TimeToVisit />
       {/* Disclaimer Section */}
-      <div className="flex flex-col items-start bg-slate-100 md:px-14 px-8 py-12 text-center">
-        <h3 className="md:text-2xl text-xl font-bold">#TamilnaduTourism</h3>
-        <p className="text-gray-600 md:text-base text-sm md:text-left mt-4 text-justify">
+      <section className="flex flex-col items-start bg-slate-100 md:px-14 px-8 py-12 text-center">
+        <h3 className="md:text-3xl text-xl font-extrabold">
+          #TamilnaduTourism
+        </h3>
+        <p className="text-gray-600  md:text-base text-sm md:text-left mt-4 text-pretty text-justify">
           Explore the world and discover the unique charm of Tamil Nadu with
           #Tamilnadu Tourism. This project is intended for educational purposes
-          only. For more information, please visit:
+          only. For more information about Tamilnadu, please visit:
           <a
             href="https://www.tamilnadutourism.tn.gov.in/"
             target="_blank"
             className="text-orange-600 hover:underline mx-2"
           >
-            tamilnadutourism.tn.gov.in .
+            tamilnadutourism.tn.gov.in . <br className="md:hidden block" />
           </a>
           All images and content have been sourced from
           <a
@@ -345,11 +112,11 @@ const Home = () => {
           >
             tamilnadutourism.tn.gov.in
           </a>
-          and modified to avoid copyright issues.
+          in and carefully adapted for use on this site.
         </p>
-      </div>
+      </section>
       <Footer />
-    </>
+    </main>
   );
 };
 
