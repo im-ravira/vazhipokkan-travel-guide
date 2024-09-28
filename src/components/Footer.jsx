@@ -1,10 +1,11 @@
 import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <>
     <footer className="bg-gray-800 text-white w-full m-0 px-0 py-4">
-      <div className="flex justify-center space-x-6 mb-2">
+      <div className="flex justify-center space-x-8 mb-2">
         <a href="https://www.linkedin.com/in/imravira/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} className="hover:text-blue-500" />
         </a>
@@ -26,7 +27,7 @@ const Footer = () => {
         <p>If you'r facing any bug or issue while using<br className="md:hidden block" /> this site feel free to contact</p>
       </div>
       <div className="mt-3 text-center text-sm hidden md:block">
-        <p>&copy; Vazhipokkan | <a href="https://www.tamilnadutourism.tn.gov.in/"
+        <p><Link to="/">&copy; Vazhipokkan</Link> | <a href="https://www.tamilnadutourism.tn.gov.in/"
             target="_blank">tamilnadutourism.gov.in 2024</a></p>
       </div>
     </footer>

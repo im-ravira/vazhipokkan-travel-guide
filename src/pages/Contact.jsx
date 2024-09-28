@@ -4,19 +4,35 @@ import Navbar from "../components/Navbar";
 
 const Contact = () => {
   return (
-    <>
+    <main className="min-h-screen">
       <Navbar />
-      <div className="w-full pt-28 pb-14 px-4">
-        <div className="flex lg:flex-row flex-col gap-6 items-center justify-center">
-          <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-8 w-full max-w-lg transform hover:scale-105 transition-transform duration-300">
-            <h1 className="text-2xl font-extrabold text-gray-800 mb-6">
+      <section className="w-full pt-24">
+        <div className="flex items-center mb-4">
+          <div className="flex-grow border-t border-gray-300"></div>
+          <h1 className="text-[1.5rem] md:text-[1.8rem] lg:text-[2.5rem] font-extrabold text-center px-4">
+            Get In Touch
+          </h1>
+          <div className="flex-grow border-t border-gray-300"></div>
+        </div>
+        <p className="text-sm md:text-base lg:text-lg text-center mb-6 md:mx-12 lg:mx-60">Feel free to reach out with any questions, feedback, or inquiries. We're here to assist you and ensure you have the best experience as you explore Tamil Nadu.</p>
+        <div className="flex lg:flex-row flex-col gap-6 items-center justify-center mb-8">
+          <article className="bg-white p-6 w-full md:max-w-[40rem] lg:max-w-[32rem] lg:space-y-10 transform hover:scale-105 transition-transform duration-300 text-justify">
+            <h1 className="text-[1.15rem] md:text-2xl lg:text-3xl font-extrabold text-gray-800 mb-6">
               Thanks For Looking!
             </h1>
             <p className="text-gray-600 mb-4">
-              I'm <a href="https://www.linkedin.com/in/imravira/" target="blank" className="text-blue-500">Ravikumar</a>, the front-end developer behind this website. As a
-              newcomer to the field, I’ve been diving into web development with
-              a lot of enthusiasm and a desire to learn and grow. This project,
-              the Vazhipokkan Tamil Nadu travel guide website, is a great
+              I'm{" "}
+              <a
+                href="https://www.linkedin.com/in/imravira/"
+                target="blank"
+                className="text-blue-500"
+              >
+                Ravikumar
+              </a>
+              , the front-end developer behind this website. As a newcomer to
+              the field, I’ve been diving into web development with a lot of
+              enthusiasm and a desire to learn and grow. This project, the
+              Vazhipokkan Tamil Nadu travel guide website, is a great
               opportunity for me to apply my skills and showcase my passion for
               creating engaging and user-friendly web experiences.
             </p>
@@ -30,11 +46,11 @@ const Contact = () => {
               Feel free to reach out if you have any questions or feedback,
               &nbsp; I’d really like to hear from you!
             </p>
-          </div>
+          </article>
 
-          <form className="w-full max-w-lg bg-white border border-gray-300 shadow-lg rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h2 className="text-2xl font-extrabold text-gray-800 mb-6">
-              Get in Touch
+          <form className="w-full md:max-w-[40rem] lg:max-w-[32rem] bg-white p-6 transform hover:scale-105 transition-transform duration-300">
+            <h2 className="text-[1.15rem] md:text-2xl lg:text-3xl font-extrabold text-gray-800 mb-6">
+              Contact Form
             </h2>
             <div className="mb-6">
               <label
@@ -88,9 +104,9 @@ const Contact = () => {
             </div>
           </form>
         </div>
-      </div>
+      </section>
       <Footer />
-    </>
+    </main>
   );
 };
 

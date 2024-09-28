@@ -1,6 +1,6 @@
-import Hills from "../assets/gallery/the-nilgiri-mountain-railway.webp";
-import Beachs from "../assets/gallery/dhanushkodi.webp";
-import Wildlife from "../assets/gallery/mudumalai.webp";
+import Hills from "../assets/attractions/the-nilgiri-mountain-railway.webp";
+import Beachs from "../assets/attractions/dhanushkodi.webp";
+import Wildlife from "../assets/attractions/mudumalai.webp";
 import DescriptionCard from "./common/DescriptionCard";
 import { Link } from "react-router-dom";
 
@@ -12,18 +12,21 @@ const TopAttractions = () => {
       src: Hills,
       content:
         "Tamil Nadu's hills, like Ooty and Kodaikanal, boast lush landscapes and cool climates. They’re perfect for trekking, boating, and enjoying scenic views.",
+        route: "*",
     },
     {
       name: "Beachs",
       src: Beachs,
       content:
         "Tamil Nadu's beaches, such as Marina and Mahabalipuram, feature golden sands and vibrant coastal views. They are ideal for enjoying, and watching spectacular sunsets.",
+        route: "*",
     },
     {
       name: "Wildlife",
       src: Wildlife,
       content:
         "Tamil Nadu's wildlife sanctuaries, such as Mudumalai and Anamalai, showcase diverse wildlife, including elephants and tigers, offering an intimate nature experience.",
+        route: "*",
     },
   ];
 
@@ -45,6 +48,7 @@ const TopAttractions = () => {
             name={attraction.name}
             src={attraction.src}
             content={attraction.content}
+            route={attraction.route}
             additionalClasses="md:w-full lg:w-full p-0"
           />
         ))}

@@ -2,24 +2,22 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-
 const MapPage = () => {
   return (
-    <>
+    <main className="min-h-screen w-full">
       <Navbar />
-      <div className="min-h-screen flex flex-col justify-between">
-        <div className="pt-16 pb-4">
-          <h1 className="md:text-2xl text-xl font-extrabold text-center text-gray-800 md:pt-8 pt-6 pb-4  bg-slate-100 w-full">
+      <section className="min-h-screen flex flex-col justify-between">
+        <article className="pt-24 pb-4">
+          <h1 className="text-[1.2rem] md:text-[1.5rem] lg:text-[3rem] font-extrabold text-center text-gray-800 mb-4">
             Explore Tamil Nadu - Map
           </h1>
-          <p className="md:text-base text-sm text-gray-700 text-center md:pb-8 pb-6 px-8  bg-slate-100 w-full">
+          <p className="md:text-base text-sm lg:text-xl text-gray-700 text-center md:pb-8 pb-6 px-8">
             Discover key locations and attractions in Tamil Nadu with our
             interactive map.
           </p>
-        </div>
+        </article>
 
-        
-        <div className="md:px-8 px-4 mb-8 mt-4">
+        <article className="md:px-8 px-4 mb-8 mt-4">
           <p className="text-orange-400 md:text-sm text-xs md:block hidden mb-2">
             Note: use Ctrl + Scroll to Zoom in or Zoom out for the map.
           </p>
@@ -33,10 +31,10 @@ const MapPage = () => {
           <p className="text-orange-400 md:text-sm text-xs md:hidden block mt-2">
             Note: use Ctrl + Scroll for Zoom in or Zoom out.
           </p>
-        </div>
-      <Footer />
-      </div>
-    </>
+        </article>
+        <Footer />
+      </section>
+    </main>
   );
 };
 

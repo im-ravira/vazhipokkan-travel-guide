@@ -31,7 +31,7 @@ const Home = () => {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full">
       <Navbar />
       <ImageSlider images={homeImages} autoPlay={true} Overlay={true} />
       <section className="text-center bg-slate-100 py-12">

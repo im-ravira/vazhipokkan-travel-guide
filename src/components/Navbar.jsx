@@ -27,21 +27,21 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
+    <header
       className={`${
-        navColor ? "bg-white  shadow-md" : "bg-transparent"
-      } w-full hover:bg-white hover:shadow-md text-gray-800  fixed z-[9999]`}
+        navColor ? "bg-white shadow-md" : "bg-transparent text-gray-950"
+      } w-full hover:bg-white hover:shadow-md hover:text-gray-800 text-gray-800  fixed z-[9999]`}
     >
       <div className="w-full mx-auto px-4 md:px-6 lg:px-16">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 text-center mt-0">
             <Link
-              href="/"
-              className="md:text-[1.75rem] text-[1.4rem] text-orange-600 font-bold font-Macondo"
+              to="/"
+              className="md:text-[1.8rem] text-[1.4rem] text-orange-600 font-bold font-Macondo"
             >
               <h1>Vazhipokkan</h1>{" "}
-              <p className="md:text-[0.69rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">
+              <p className="md:text-[0.7rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">
                 Discover Tamil Nadu's Wonders
               </p>
             </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
           </div>
 
           {/* Nav Links (md) */}
-          <div
+          <nav
             className={`hidden md:flex md:space-x-3 xl:space-x-6 md:text-sm text-xs font-semibold`}
           >
             <Link to="/" className="hover:text-orange-500">
@@ -271,13 +271,13 @@ const Navbar = () => {
             <Link to="/contact" className="hover:text-orange-500">
               Contact
             </Link>
-          </div>
+          </nav>
         </div>
       </div>
 
       {/* Nav Links (sm) */}
       {isMobileMenuOpen && (
-        <div className="md:hidden text-xs">
+        <nav className="md:hidden text-xs">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
@@ -502,9 +502,9 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-        </div>
+        </nav>
       )}
-    </nav>
+    </header>
   );
 };
 

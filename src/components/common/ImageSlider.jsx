@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay = false }) => {
@@ -31,22 +31,22 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay
   }, [currentIndex, autoPlay, autoPlayInterval]);
 
   return (
-    <div className="relative w-full md:h-screen h-auto overflow-hidden">
+    <section className="relative w-full h-auto overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-none w-full md:h-screen h-80  relative">
+          <div key={index} className="flex-none w-full h-[40vh] md:h-[60vh] lg:h-screen object-cover relative">
             <img
               src={image.src}
               alt={image.name}
               className="w-full h-full  object-cover"
             />
             {Overlay && (
-              <div className="absolute md:bottom-10 bottom-1 md:left-10 left-1 bg-transparent  md:bg-gray-800 md:bg-opacity-75 md:p-6 p-2 rounded-lg shadow-lg max-w-xs">
-                <h2 className="md:text-2xl text-base text-white font-extrabold md:mb-4 mb-1 mr-24 md:mr-0 md:block">"Discover more amazing sights and experiences."</h2>
-                <Link to="/gallery"><button className="bg-orange-500 hover:bg-orange-600 text-white md:text-sm text-xs font-bold ml-2 md:ml-0 md:py-2 py-1 md:px-6 px-3 rounded">
+              <div className="absolute md:bottom-10 bottom-8 md:left-10 left-4 bg-gray-800/60 lg:px-10 lg:py-6 p-2 rounded-lg shadow-lg max-w-[14rem] md:max-w-80 lg:max-w-sm">
+                <h2 className="text-base md:text-xl lg:text-3xl text-left text-white font-extrabold mb-2 md:mb-4 ">"Discover more amazing sights and experiences."</h2>
+                <Link to="/gallery"><button className="bg-orange-500 hover:bg-orange-600 text-white md:text-base text-xs font-bold ml-2 md:ml-0 md:py-2 py-1 md:px-6 px-3 rounded">
                  Explore
                 </button></Link>
               </div>
@@ -77,7 +77,7 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 3000, Overlay
           ></button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

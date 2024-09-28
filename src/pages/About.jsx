@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CoverImage from "../assets/gallery/valluvar.webp";
+import CoverImage from "../assets/attractions/thiruvalluvar.webp";
 
 const About = () => {
-  
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
 
   return (
-    <>
+    <main className="min-h-screen">
       <Navbar />
-      <div>
-        <img className="w-full md:h-screen h-80" src={CoverImage} alt="" />
-      </div>
-      <div className="bg-white md:px-16 px-8 py-12 text-gray-800">
-        <h2 className="md:text-2xl text-xl text-center font-extrabold mb-6">
-          About Tamil Nadu Tourism
-        </h2>
-        <div className="mb-12">
-          <h3 className="md:text-2xl text-xl font-bold mb-4">
+      <article className="flex flex-col items-center justify-center">
+          <img className="w-full h-[40vh] md:h-[60vh] lg:h-screen object-cover relative" src={CoverImage} alt="Thiruvallur Statue" />
+          <div className="absolute flex flex-col items-center justify-center text-white">
+          <h1 className="text-[2.3rem] md:text-[3.5rem] lg:text-7xl mb-2 md:mb-4 lg:mb-6 text-center w-full font-extrabold">
+            About Tamilnadu
+          </h1>
+          <p className="md:text-xl text-base lg:text-2xl px-2 max-w-xl text-center">
+          Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy.
+          </p>
+          </div>
+        </article>
+      <section className="bg-white md:px-16 px-8 py-12 text-gray-800">
+        <article className="mb-12">
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl font-bold mb-4">
             Welcome to Tamil Nadu!
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -46,10 +46,10 @@ const About = () => {
             one of India's top tourist destinations, promising something special
             at every turn.
           </p>
-        </div>
+        </article>
 
-        <div className="mb-12">
-          <h3 className="md:text-2xl text-xl font-bold mb-4">
+        <article className="mb-12">
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl font-bold mb-4">
             Tamil Nadu - Pilgrimage Paradise
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -93,10 +93,10 @@ const About = () => {
             of these sites offers a unique glimpse into the spiritual and
             architectural legacy of the region.
           </p>
-        </div>
+        </article>
 
-        <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-bold mb-4">
+        <article className="mb-12">
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl  font-bold mb-4">
             Natural Beauty of Tamil Nadu
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -131,10 +131,10 @@ const About = () => {
             these beautiful lakes and waterfalls in Tamil Nadu is an experience
             not to be missed.
           </p>
-        </div>
+        </article>
 
-        <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-bold mb-4">
+        <article className="mb-12">
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl  font-bold mb-4">
             Culture and Heritage - Discover the Ancient Past of Tamil Nadu
           </h3>
           <p className="text-justify text-gray-700 text-sm md:text-base mb-4">
@@ -166,10 +166,10 @@ const About = () => {
             Darasuram, and Gangaikondacholapuram, are must-visit destinations
             that showcase the rich cultural heritage of Tamil Nadu.
           </p>
-        </div>
+        </article>
 
-        <div className="mb-12">
-          <h3 className="md:text-2xl text-xl  font-bold text-gray-800 mb-6">
+        <article className="mb-12">
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl  font-bold text-gray-800 mb-6">
             Most Visited Attractions & Tourist Places in Tamil Nadu
           </h3>
           <ul className="space-y-4 text-gray-700 text-sm md:text-base list-inside">
@@ -242,10 +242,10 @@ const About = () => {
               </p>
             </li>
           </ul>
-        </div>
+        </article>
 
-        <div>
-          <h3 className="md:text-2xl text-xl font-bold mb-4">
+        <article>
+          <h3 className="text-[1.15rem] md:text-2xl lg:text-3xl font-bold mb-4">
             Quick Facts About Tamil Nadu
           </h3>
           <div className="overflow-x-auto">
@@ -347,8 +347,8 @@ const About = () => {
               </tbody>
             </table>
           </div>
-        </div>
-        <div className="mt-12 text-center">
+        </article>
+        <section className="mt-12 text-center">
           <p className="md:text-sm text-xs text-gray-600">
             This site is for educational purposes. To <br className="md:hidden block" />view more imformations of
             TamilNadu, <br className="md:hidden block" />visit{" "}
@@ -362,10 +362,10 @@ const About = () => {
             </a>
             .
           </p>
-        </div>
-      </div>
+        </section>
+      </section>
       <Footer />
-    </>
+    </main>
   );
 };
 

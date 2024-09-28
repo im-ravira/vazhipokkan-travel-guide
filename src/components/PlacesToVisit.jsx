@@ -12,18 +12,21 @@ const PlacesToVisit = () => {
       src: Chennai,
       content:
         "Chennai, capital of Tamil Nadu is a cultural hub of South India. It houses some of the most beautiful heritage monuments, pristine beaches, churches, theme parks and universities..",
+        route: "*",
     },
     {
       name: "Madurai",
       src: Madurai,
       content:
         "It is the oldest city of Tamil Nadu which is very popular for its iconic temple of Meenakshi sundareshwarar. Devotees from all over the world come to seek divine blessings. ",
+        route: "*",
     },
     {
       name: "Ooty",
       src: Ooty,
       content:
         "The hill town of Ooty is an exquisite hill station to visit in Tamil Nadu. It houses natural wonders like Doddabetta and highest peak of Nilgiri – Ootacamund. It is also known as Switzerland of India.",
+        route: "*",
     },
   ];
 
@@ -47,6 +50,7 @@ const PlacesToVisit = () => {
             name={destination.name}
             src={destination.src}
             content={destination.content}
+            route={destination.route}
             additionalClasses="md:w-full lg:w-full p-1"
           />
         ))}
