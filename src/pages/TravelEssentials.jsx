@@ -1,10 +1,21 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Traveler from "../assets/hiking.webp";
+import { Helmet } from 'react-helmet-async';
 
 const TravelEssentials = () => {
   return (
     <main className="min-h-screen w-full">
+      <Helmet>
+        <title>Your Trip Guide - Travel Essentials</title>
+        <meta name="description" content="Discover essential travel information, tips, and how to reach Tamil Nadu for an unforgettable trip." />
+        <meta name="keywords" content="Travel, Tamil Nadu, Guide, Tips, Tourism" />
+        <meta name="author" content="Your Name" />
+        <meta property="og:title" content="Your Trip Guide - Travel Essentials" />
+        <meta property="og:description" content="Explore essential travel tips and information for your trip to Tamil Nadu." />
+        <meta property="og:image" content={Traveler} />
+        <meta property="og:url" content="https://yourwebsite.com/travel-essentials" />
+      </Helmet>
       <Navbar />
       <article className="flex flex-col items-center justify-center">
         <img

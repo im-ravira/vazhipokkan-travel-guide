@@ -9,6 +9,7 @@ import HogenakkalFalls from "../assets/attractions/Hogenakkal.webp";
 import MukurthiNationalPark from "../assets/imageslider/Mukurthi-national-park.webp";
 import OotyHills from "../assets/imageslider/Ooty.webp";
 import PictureResources from "../components/common/PictureResources";
+import { Helmet } from 'react-helmet-async';
 
 const Gallery = () => {
   const galleryImages = [
@@ -52,6 +53,50 @@ const Gallery = () => {
 
   return (
     <main className="min-h-screen w-full">
+      <Helmet>
+        <title>Gallery - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Explore a gallery of Tamil Nadu's beautiful destinations, including beaches, temples, waterfalls, and wildlife sanctuaries."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Tamil Nadu Travel Guide,Tamil Nadu Gallery, Tamil Nadu Wonders, Tourist Attractions, Hills, Beaches, waterfalls, forts, Temples, Wildlife"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="Gallery - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Explore a gallery of Tamil Nadu's beautiful destinations, including beaches, temples, waterfalls, and wildlife sanctuaries."
+        />
+        <meta property="og:image" content={HogenakkalFalls} />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/gallery" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Gallery - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore a gallery of Tamil Nadu's beautiful destinations, including beaches, temples, waterfalls, and wildlife sanctuaries."
+        />
+        <meta
+          name="twitter:image"
+          content={HogenakkalFalls}
+        />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/gallery" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, noimageindex, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/gallery" />  
+      </Helmet>
       <Navbar />
       <ImageSlider images={galleryImages} autoPlay={true} />
       <section className="md:px-8 px-4 py-12">

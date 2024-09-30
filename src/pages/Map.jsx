@@ -1,10 +1,55 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const MapPage = () => {
   return (
     <main className="min-h-screen w-full">
+      <Helmet>
+        <title>Map - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Explore key locations and top attractions in Tamil Nadu with our interactive map. Discover popular tourist spots and plan your visit with ease."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Tamil Nadu Travel Guide,Tamil Nadu Gallery, Tamil Nadu Wonders, Tourist Attractions, History, Culture, Hills, Beaches, waterfalls, forts, Temples, Wildlife"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="Map - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Explore key locations and top attractions in Tamil Nadu with our interactive map. Discover popular tourist spots and plan your visit with ease."
+        />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/map.jpg" />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/map" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Map - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore key locations and top attractions in Tamil Nadu with our interactive map. Discover popular tourist spots and plan your visit with ease."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vazhipokkan.netlify.app/map.jpg"
+        />
+        <meta property="twitter:url" content="https://vazhipokkan.netlify.app/map" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/map" />  
+      </Helmet>
       <Navbar />
       <section className="min-h-screen flex flex-col justify-between">
         <article className="pt-24 pb-4">

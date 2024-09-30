@@ -1,14 +1,59 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CoverImage from "../assets/attractions/thiruvalluvar.webp";
+import AboutImage from "../assets/attractions/thiruvalluvar.webp";
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
 
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>About Tamil Nadu - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy. Visit ancient temples, hill stations, and scenic beaches."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Tamil Nadu Travel Guide,Tamil Nadu Gallery, Tamil Nadu Wonders, Tourist Attractions, History, Culture, Hills, Beaches, waterfalls, forts, Temples, Wildlife"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="About Tamil Nadu - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy. Visit ancient temples, hill stations, and scenic beaches."
+        />
+        <meta property="og:image" content={AboutImage} />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/about" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Tamil Nadu - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy. Visit ancient temples, hill stations, and scenic beaches."
+        />
+        <meta
+          name="twitter:image"
+          content={AboutImage}
+        />
+        <meta property="twitter:url" content="https://vazhipokkan.netlify.app/about" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/about" />  
+      </Helmet>
       <Navbar />
       <article className="flex flex-col items-center justify-center">
-          <img className="w-full h-[40vh] md:h-[60vh] lg:h-screen object-cover relative" src={CoverImage} alt="Thiruvallur Statue" />
+          <img className="w-full h-[40vh] md:h-[60vh] lg:h-screen object-cover relative" src={AboutImage} alt="Thiruvallur Statue" />
           <div className="absolute flex flex-col items-center justify-center text-white">
           <h1 className="text-[2.3rem] md:text-[3.5rem] lg:text-7xl mb-2 md:mb-4 lg:mb-6 text-center w-full font-extrabold">
             About Tamilnadu

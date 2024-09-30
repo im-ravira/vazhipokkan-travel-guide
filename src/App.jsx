@@ -8,10 +8,12 @@ import Attractions from "./pages/Attractions";
 import MaintenancePage from "./pages/MaintenancePage";
 import TravelEssentials from "./pages/TravelEssentials";
 import Map from "./pages/Map";
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const App = () => {
   return (
+    <HelmetProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,6 +27,7 @@ const App = () => {
         <Route path="*" element={<MaintenancePage />} />
       </Routes>
     </Router>
+    </HelmetProvider>
   );
 };
 

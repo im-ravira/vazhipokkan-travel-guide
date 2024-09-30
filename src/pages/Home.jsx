@@ -11,6 +11,7 @@ import TravelOptions from "../components/TravelOptions";
 import TimeToVisit from "../components/TimeToVisit";
 import PlacesToVisit from "../components/PlacesToVisit";
 import TopAttractions from "../components/TopAttractions";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const homeImages = [
@@ -32,6 +33,51 @@ const Home = () => {
 
   return (
     <main className="min-h-screen w-full">
+      <Helmet>
+        <title>Home - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Explore Tamil Nadu with Vazhipokkan - Discover its rich heritage, vibrant culture, temples, festivals, serene beaches, and scenic hill stations. Your guide to Tamil Nadu Tourism."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Temples, Festivals, Tamil Nadu Travel Guide, Places to visit, Tamil culture, Tamil Nadu attractions"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="Home - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Explore Tamil Nadu with Vazhipokkan - Discover its rich heritage, vibrant culture, temples, festivals, serene beaches, and scenic hill stations. Your guide to Tamil Nadu Tourism."
+        />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/og-image.jpg" />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Home - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Tamil Nadu with Vazhipokkan - Discover its rich heritage, vibrant culture, temples, festivals, serene beaches, and scenic hill stations. Your guide to Tamil Nadu Tourism."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vazhipokkan.netlify.app/og-image.jpg"
+        />
+        <meta property="twitter:url" content="https://vazhipokkan.netlify.app/" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/" />  
+      </Helmet>
+
       <Navbar />
       <ImageSlider images={homeImages} autoPlay={true} Overlay={true} />
       <section className="text-center bg-slate-100 py-12">

@@ -10,6 +10,7 @@ import Kanyakumari from "../assets/destinations/Kanyakumari.webp";
 import Mahabalipuram from "../assets/destinations/Mahabalipuram.webp";
 import Thanjavur from "../assets/destinations/Thanjavur.webp";
 import MahabalipuramTemple from "../assets/mamallapuram-shore-temple.webp";
+import { Helmet } from 'react-helmet-async';
 
 const Destinations = () => {
   const destinations = [
@@ -73,6 +74,50 @@ const Destinations = () => {
 
   return (
     <main className="min-h-screen w-full">
+      <Helmet>
+        <title>Top Destinations in Tamil Nadu - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Discover the top destinations in Tamil Nadu, including cities with ancient temples, stunning beaches, hill stations, and UNESCO World Heritage sites."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Tamil Nadu Travel Guide,Tamil Nadu Gallery, Tamil Nadu Wonders, Tourist Attractions, History, Culture, Hills, Beaches, waterfalls, forts, Temples, Wildlife"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="Top Destinations in Tamil Nadu - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Discover the top destinations in Tamil Nadu, including cities with ancient temples, stunning beaches, hill stations, and UNESCO World Heritage sites."
+        />
+        <meta property="og:image" content={MahabalipuramTemple} />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/destinations" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Top Destinations in Tamil Nadu - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover the top destinations in Tamil Nadu, including cities with ancient temples, stunning beaches, hill stations, and UNESCO World Heritage sites."
+        />
+        <meta
+          name="twitter:image"
+          content={MahabalipuramTemple}
+        />
+        <meta property="twitter:url" content="https://vazhipokkan.netlify.app/destinations" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, noimageindex, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/destinations" />  
+      </Helmet>
       <Navbar />
       <article className="flex flex-col items-center justify-center relative">
         <img

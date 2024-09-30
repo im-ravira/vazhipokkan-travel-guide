@@ -1,10 +1,22 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-full">
+        <Helmet>
+        <title>Contact Us - Vazhipokkan Travel Guide</title>
+        <meta name="description" content="Get in touch with us for questions, feedback, or inquiries regarding Tamil Nadu travel. We’re here to assist you!" />
+        <meta name="keywords" content="contact, Tamil Nadu travel, feedback, inquiries" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="noindex, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/map" />
+      </Helmet>
       <Navbar />
       <section className="w-full pt-24">
         <div className="flex items-center mb-4">
