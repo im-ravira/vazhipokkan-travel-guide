@@ -7,14 +7,48 @@ const TravelEssentials = () => {
   return (
     <main className="min-h-screen w-full">
       <Helmet>
-        <title>Your Trip Guide - Travel Essentials</title>
-        <meta name="description" content="Discover essential travel information, tips, and how to reach Tamil Nadu for an unforgettable trip." />
-        <meta name="keywords" content="Travel, Tamil Nadu, Guide, Tips, Tourism" />
-        <meta name="author" content="Your Name" />
-        <meta property="og:title" content="Your Trip Guide - Travel Essentials" />
-        <meta property="og:description" content="Explore essential travel tips and information for your trip to Tamil Nadu." />
-        <meta property="og:image" content={Traveler} />
-        <meta property="og:url" content="https://yourwebsite.com/travel-essentials" />
+        <title>Your Trip Guide  - Vazhipokkan Travel Guide</title>
+        <meta
+          name="description"
+          content="Discover essential travel information, tips, and how to reach Tamil Nadu for an unforgettable trip."
+        />
+        <meta
+          name="keywords"
+          content="Tamil Nadu Tourism, South India, Tamil Nadu Travel Guide,Tamil Nadu Gallery, Tamil Nadu Wonders, Tourist Attractions, History, Culture, Hills, Beaches, waterfalls, forts, Temples, Wildlife, travel, travel tips, tourism"
+        />
+        <meta name="author" content="Vazhipokkan" />
+
+        {/* Meta OG tags */}
+        <meta property="og:title" content="Your Trip Guide - Vazhipokkan Travel Guide" />
+        <meta
+          property="og:description"
+          content="Discover essential travel information, tips, and how to reach Tamil Nadu for an unforgettable trip."
+        />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/travel-essentials/hiking.jpg" />
+        <meta property="og:url" content="https://vazhipokkan.netlify.app/travel-essentials" />
+        <meta property="og:type" content="website"/>
+
+        {/* Meta Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Your Trip Guide - Vazhipokkan Travel Guide"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover essential travel information, tips, and how to reach Tamil Nadu for an unforgettable trip."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vazhipokkan.netlify.app/travel-essentials/hiking.jpg"
+        />
+        <meta property="twitter:url" content="https://vazhipokkan.netlify.app/travel-essentials" />
+
+        {/* Meta Robots tag */}
+        <meta name="robots" content="index, follow" />
+
+        {/* Cononical url */}
+        <link rel="canonical" href="https://vazhipokkan.netlify.app/travel-essentials" />  
       </Helmet>
       <Navbar />
       <article className="flex flex-col items-center justify-center">

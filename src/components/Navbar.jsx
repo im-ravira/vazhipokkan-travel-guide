@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        navColor ? "bg-black shadow-md" : "bg-transparent text-gray-950"
+        navColor ? "bg-white shadow-md" : "bg-transparent text-gray-950"
       } w-full hover:bg-white hover:shadow-md hover:text-gray-800 text-gray-800  fixed z-[9999]`}
     >
       <div className="w-full mx-auto px-4 md:px-6 lg:px-16">

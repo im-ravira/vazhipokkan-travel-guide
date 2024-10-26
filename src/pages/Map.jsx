@@ -24,7 +24,7 @@ const MapPage = () => {
           property="og:description"
           content="Explore key locations and top attractions in Tamil Nadu with our interactive map. Discover popular tourist spots and plan your visit with ease."
         />
-        <meta property="og:image" content="https://vazhipokkan.netlify.app/map.jpg" />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/map/map.jpg" />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/map" />
         <meta property="og:type" content="website"/>
 
@@ -40,7 +40,7 @@ const MapPage = () => {
         />
         <meta
           name="twitter:image"
-          content="https://vazhipokkan.netlify.app/map.jpg"
+          content="https://vazhipokkan.netlify.app/map/map.jpg"
         />
         <meta property="twitter:url" content="https://vazhipokkan.netlify.app/map" />
 

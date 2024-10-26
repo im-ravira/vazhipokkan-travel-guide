@@ -34,33 +34,6 @@ const TopAttractionsPage = () => {
 
   return (
     <main className="min-h-screen w-full">
-       <Helmet>
-        <title>Top Attractions in Tamil Nadu | Vazhipokkan Travel Guide</title>
-        <meta
-          name="description"
-          content="Explore the top attractions in Tamil Nadu, including serene hill stations, beautiful beaches, wildlife sanctuaries, and ancient temples."
-        />
-        <meta
-          name="keywords"
-          content="Tamil Nadu attractions, hill stations, beaches, temples, wildlife sanctuaries, travel guide"
-        />
-        <link rel="canonical" href="https://www.yoursite.com/top-attractions" />
-        <meta property="og:title" content="Top Attractions in Tamil Nadu" />
-        <meta
-          property="og:description"
-          content="Discover the top tourist destinations in Tamil Nadu, featuring scenic beauty, cultural heritage, and natural wonders."
-        />
-        <meta property="og:image" content="URL_to_image" />
-        <meta property="og:url" content="https://www.yoursite.com/top-attractions" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Top Attractions in Tamil Nadu" />
-        <meta
-          name="twitter:description"
-          content="Explore Tamil Nadu's most popular tourist attractions."
-        />
-        <meta name="twitter:image" content="URL_to_image" />
-      </Helmet>
       <Helmet>
         <title>Top Attractions in Tamil Nadu - Vazhipokkan Travel Guide</title>
         <meta
@@ -79,7 +52,7 @@ const TopAttractionsPage = () => {
           property="og:description"
           content="Explore the top attractions in Tamil Nadu, including serene hill stations, beautiful beaches, wildlife sanctuaries, and ancient temples."
         />
-        <meta property="og:image" content={NilgiriMountain} />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/attractions/nilagiri-mountain.jpg" />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/attractions" />
         <meta property="og:type" content="website"/>
 
@@ -95,7 +68,7 @@ const TopAttractionsPage = () => {
         />
         <meta
           name="twitter:image"
-          content={NilgiriMountain}
+          content="https://vazhipokkan.netlify.app/attractions/nilagiri-mountain.jpg"
         />
         <meta property="twitter:url" content="https://vazhipokkan.netlify.app/attractions" />
 

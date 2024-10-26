@@ -124,7 +124,7 @@ const Home = () => {
         </article>
         <div className="flex justify-start text-center mt-8">
           <Link to="/about">
-            <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300">
+            <button className="btn btn-secondary">
               View More
             </button>
           </Link>
@@ -135,7 +135,7 @@ const Home = () => {
       <TravelOptions />
       <TimeToVisit />
       {/* Disclaimer Section */}
-      <section className="flex flex-col items-start bg-slate-100 md:px-14 px-8 py-12 text-center">
+      <section className="flex flex-col items-start bg-slate-100/65 md:px-14 px-8 py-12 text-center">
         <h3 className="md:text-3xl text-xl font-extrabold">
           #TamilnaduTourism
         </h3>

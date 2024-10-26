@@ -30,7 +30,7 @@ const TravelOptions = () => {
           How to Reach Tamil Nadu?
         </h2>
         <Link to="/travel-essentials">
-          <button className="bg-orange-600 text-white text-sm font-bold py-2 px-6 rounded-full hover:bg-orange-700 transition duration-300 md:block hidden">
+          <button className="btn btn-secondary md:block hidden">
             View More
           </button>
         </Link>
@@ -56,7 +56,7 @@ const TravelOptions = () => {
       </article>
       <div className="flex items-center justify-center">
         <Link to="/travel-essentials">
-          <button className="bg-orange-600 text-white md:text-sm text-xs font-bold py-2 md:px-6 px-16 text-nowrap rounded-full hover:bg-orange-700 transition duration-300 md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
+          <button className="btn btn-secondary md:text-sm text-xs py-2 md:px-6 px-16 text-nowrap md:hidden block md:mt-0 mt-6 mx-16 md:mx-0">
             View More
           </button>
         </Link>

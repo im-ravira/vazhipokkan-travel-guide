@@ -92,7 +92,7 @@ const Destinations = () => {
           property="og:description"
           content="Discover the top destinations in Tamil Nadu, including cities with ancient temples, stunning beaches, hill stations, and UNESCO World Heritage sites."
         />
-        <meta property="og:image" content={MahabalipuramTemple} />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/destinations/mamallapuram-temple.jpg" />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/destinations" />
         <meta property="og:type" content="website"/>
 
@@ -108,7 +108,7 @@ const Destinations = () => {
         />
         <meta
           name="twitter:image"
-          content={MahabalipuramTemple}
+          content="https://vazhipokkan.netlify.app/destinations/mamallapuram-temple.jpg"
         />
         <meta property="twitter:url" content="https://vazhipokkan.netlify.app/destinations" />
 

@@ -71,7 +71,7 @@ const Gallery = () => {
           property="og:description"
           content="Explore a gallery of Tamil Nadu's beautiful destinations, including beaches, temples, waterfalls, and wildlife sanctuaries."
         />
-        <meta property="og:image" content={HogenakkalFalls} />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/gallery/hokenakal-waterfalls.jpg" />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/gallery" />
         <meta property="og:type" content="website"/>
 
@@ -87,7 +87,7 @@ const Gallery = () => {
         />
         <meta
           name="twitter:image"
-          content={HogenakkalFalls}
+          content="https://vazhipokkan.netlify.app/gallery/hokenakal-waterfalls.jpg"
         />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/gallery" />
 

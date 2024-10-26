@@ -9,12 +9,14 @@ import MaintenancePage from "./pages/MaintenancePage";
 import TravelEssentials from "./pages/TravelEssentials";
 import Map from "./pages/Map";
 import { HelmetProvider } from 'react-helmet-async';
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const App = () => {
   return (
     <HelmetProvider>
     <Router>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />

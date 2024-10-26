@@ -108,7 +108,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-start">
               <button
-                className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition-colors duration-300"
+                className="btn btn-primary focus:bg-blue-500 focus:ring-blue-400"
                 type="button"
               >
                 Send Message

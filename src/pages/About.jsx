@@ -25,7 +25,7 @@ const About = () => {
           property="og:description"
           content="Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy. Visit ancient temples, hill stations, and scenic beaches."
         />
-        <meta property="og:image" content={AboutImage} />
+        <meta property="og:image" content="https://vazhipokkan.netlify.app/about/pongal-festival.jpg" />
         <meta property="og:url" content="https://vazhipokkan.netlify.app/about" />
         <meta property="og:type" content="website"/>
 
@@ -41,7 +41,7 @@ const About = () => {
         />
         <meta
           name="twitter:image"
-          content={AboutImage}
+          content="https://vazhipokkan.netlify.app/about/pongal-festival.jpg"
         />
         <meta property="twitter:url" content="https://vazhipokkan.netlify.app/about" />
 
