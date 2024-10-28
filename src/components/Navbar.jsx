@@ -295,18 +295,17 @@ const Navbar = () => {
               </button>
               {isDestinationsOpen && (
                 <div className="pl-4">
-                  <a
-                    href="#"
+                  
+                  <Link to="/destinations"
                     className="px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300 flex justify-between items-center"
                     onClick={() =>
                       setTopDestinationsOpen(!isTopDestinationsOpen)
                     }
                   >
-                    <Link to="/destinations"><span><span className=" text-orange-500 font-semibold">
+                    <span><span className=" text-orange-500 font-semibold">
                       &#x22EE;
                     </span>{" "}
-                    Top Destinations</span></Link><FaSortDown />
-                  </a>
+                    Top Destinations</span><span className="hover:text-orange-500"><FaSortDown /></span></Link>
                   {isTopDestinationsOpen && (
                     <div className="pl-4">
                       <Link
@@ -368,9 +367,9 @@ const Navbar = () => {
                     </div>
                   )}
                   
-                  <a
-                    href="#"
-                    className="px-3 py-2 rounded-md text-gray-800 hover:bg-orange-300 flex justify-between items-center"
+                  <Link
+                    to="/attractions"
+                    className="px-3 py-2 rounded-md text-gray-800 flex justify-between items-center"
                     onClick={() =>
                       setTopAttractionsOpen(!isTopAttractionsOpen)
                     }
@@ -381,8 +380,8 @@ const Navbar = () => {
                     >
                       &#x22EE;
                     </span>{" "}
-                    Top Attractions</span><FaSortDown />
-                  </a>
+                    Top Attractions</span><span className="hover:text-orange-500"><FaSortDown /></span>
+                  </Link>
                   {isTopAttractionsOpen && (
                     <div className="pl-4">
                       <Link
