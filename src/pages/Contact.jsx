@@ -26,7 +26,7 @@ const Contact = () => {
           </h1>
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
-        <p className="text-sm md:text-base lg:text-lg text-center mb-6 md:mx-12 lg:mx-60">Feel free to reach out with any questions, feedback, or inquiries. We're here to assist you and ensure you have the best experience as you explore Tamil Nadu.</p>
+        <p className="text-sm md:text-base lg:text-lg text-center mb-6 mx-2 md:mx-12 lg:mx-60">Feel free to reach out with any questions, feedback, or inquiries. We're here to assist you and ensure you have the best experience as you explore Tamil Nadu.</p>
         <div className="flex lg:flex-row flex-col gap-6 items-center justify-center mb-8">
           <article className="bg-white p-6 w-full md:max-w-[40rem] lg:max-w-[32rem] lg:space-y-10 transform hover:scale-105 transition-transform duration-300 text-justify">
             <h1 className="text-[1.15rem] md:text-2xl lg:text-3xl font-extrabold text-gray-800 mb-6">
