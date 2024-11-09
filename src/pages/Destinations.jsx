@@ -6,7 +6,7 @@ import Madurai from "../assets/destinations/Madurai.webp";
 import Ooty from "../assets/destinations/Ooty.webp";
 import Kodaikanal from "../assets/destinations/Kodaikanal.webp";
 import Kancheepuram from "../assets/destinations/kancheepuram.webp";
-import Kanyakumari from "../assets/destinations/Kanyakumari.webp";
+import Kanyakumari from "../assets/destinations/kanyakumari.webp";
 import Mahabalipuram from "../assets/destinations/Mahabalipuram.webp";
 import Thanjavur from "../assets/destinations/Thanjavur.webp";
 import MahabalipuramTemple from "../assets/mamallapuram-shore-temple.webp";
