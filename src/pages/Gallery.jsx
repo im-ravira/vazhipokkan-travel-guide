@@ -101,13 +101,13 @@ const Gallery = () => {
       <ImageSlider images={galleryImages} autoPlay={true} />
       <section className="md:px-8 px-4 py-12">
         <h1 className="text-[1.2rem] md:text-[1.5rem] lg:text-[2rem] font-extrabold text-center mb-8">
-          A Glimpse of <br className="md:hidden block" /> Tamil Nadu's Wonders
+          A Glimpse of <br className="md:hidden block" /> Tamil Nadu&apos;s Wonders
         </h1>
         <p className="text-xs md:text-base lg:text-lg md:text-center text-justify mb-12">
           Explore the beauty and diversity of Tamilnadu through our curated
           gallery. Discover stunning Scenery, historic monuments,
           wildlife, and more. Whether planning your next adventure or simply
-          admiring the state's wonders, there's something for everyone in our
+          admiring the state&apos;s wonders, there&apos;s something for everyone in our
           gallery.
         </p>
         <section className="flex flex-col gap-4 lg:flex-row">

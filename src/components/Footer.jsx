@@ -24,7 +24,7 @@ const Footer = () => {
         <p>&copy; Vazhipokkan | tamilnadutourism.gov.in 2024</p>
       </div>
       <div className="text-center text-xs mt-3">
-        <p>If you'r facing any bug or issue while using<br className="md:hidden block" /> this site feel free to contact</p>
+        <p>If you&apos;r facing any bug or issue while using<br className="md:hidden block" /> this site feel free to contact</p>
       </div>
       <div className="mt-3 text-center text-sm hidden md:block">
         <p><Link to="/">&copy; Vazhipokkan</Link> | <a href="https://www.tamilnadutourism.tn.gov.in/"

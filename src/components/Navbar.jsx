@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaSortDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             >
               <h1>Vazhipokkan</h1>{" "}
               <p className="md:text-[0.7rem] text-[0.5rem] leading-[0.5rem] text-gray-800 font-semibold">
-                Discover Tamil Nadu's Wonders
+                Discover Tamil Nadu&apos;s Wonders
               </p>
             </Link>
           </div>

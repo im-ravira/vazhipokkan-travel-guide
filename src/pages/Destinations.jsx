@@ -5,7 +5,7 @@ import Chennai from "../assets/destinations/Chennai.webp";
 import Madurai from "../assets/destinations/Madurai.webp";
 import Ooty from "../assets/destinations/Ooty.webp";
 import Kodaikanal from "../assets/destinations/Kodaikanal.webp";
-import Kancheepuram from "../assets/destinations/Kancheepuram.webp";
+import Kancheepuram from "../assets/destinations/kancheepuram.webp";
 import Kanyakumari from "../assets/destinations/Kanyakumari.webp";
 import Mahabalipuram from "../assets/destinations/Mahabalipuram.webp";
 import Thanjavur from "../assets/destinations/Thanjavur.webp";
@@ -133,10 +133,10 @@ const Destinations = () => {
       </article>
       <div className="text-center md:px-12 px-8 py-12">
         <h2 className="text-[1.2rem] md:text-[1.5rem] lg:text-[2.2rem] font-extrabold text-gray-800 mb-4">
-          Explore Tamilnadu's Top Destinations
+          Explore Tamilnadu&apos;s Top Destinations
         </h2>
         <p className="text-sm md:text-base lg:text-lg lg:leading-7 text-gray-700 md:text-center text-justify md:px-24 px-0">
-          Tamil Nadu's cities blend modernity with tradition, featuring stunning
+          Tamil Nadu&apos;s cities blend modernity with tradition, featuring stunning
           temples, bustling markets, and rich cultural heritage. Each city
           offers a unique experience, from spiritual landmarks to vibrant
           culinary scenes.

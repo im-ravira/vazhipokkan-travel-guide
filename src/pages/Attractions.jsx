@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -98,7 +98,7 @@ const TopAttractionsPage = () => {
         <p className="text-sm md:text-base lg:text-lg lg:leading-7 text-gray-700 md:text-center text-justify md:px-18 px-0">
           Tamil Nadu boasts a mix of scenic hill stations, serene beaches, and
           ancient temples, offering something for every traveler. From wildlife
-          sanctuaries to stunning waterfalls, the state's natural beauty and
+          sanctuaries to stunning waterfalls, the state&apos;s natural beauty and
           rich heritage make it a must-visit destination.
         </p>
       </div>

@@ -113,7 +113,7 @@ const TravelEssentials = () => {
               </li>
               <li>
                 Additionally, domestic airports in Salem, Tuticorin, and
-                Puducherry complement the state's air travel infrastructure.
+                Puducherry complement the state&apos;s air travel infrastructure.
               </li>
             </ul>
           </article>

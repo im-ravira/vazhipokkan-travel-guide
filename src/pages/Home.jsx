@@ -109,16 +109,16 @@ const Home = () => {
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
             Explore the spiritual aura of its countless temples, relax on serene
             beaches and in peaceful hill stations, and experience the vitality
-            of its diverse wildlife sanctuaries and national parks. The state's
+            of its diverse wildlife sanctuaries and national parks. The state&apos;s
             vibrant festivals, traditional art forms, and bustling markets add
-            to its unique charm. Whether you're seeking spiritual fulfillment,
+            to its unique charm. Whether you&apos;re seeking spiritual fulfillment,
             natural beauty, or cultural richness, Tamil Nadu offers an
             unparalleled journey through South India.
           </p>
           <p className="md:text-base text-sm text-gray-700 md:text-justify text-justify mt-4">
             With a wide array of experiences, from ancient heritage sites to
             tranquil beaches and scenic hill stations, Tamil Nadu stands out as
-            one of India's top tourist destinations, promising something special
+            one of India&apos;s top tourist destinations, promising something special
             at every turn.
           </p>
         </article>

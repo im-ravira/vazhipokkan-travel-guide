@@ -59,7 +59,7 @@ const About = () => {
             About Tamilnadu
           </h1>
           <p className="md:text-xl text-base lg:text-2xl px-2 max-w-xl text-center">
-          Explore Tamil Nadu's rich history, vibrant culture, stunning natural beauty, and spiritual legacy.
+          Explore Tamil Nadu&apos;s rich history, vibrant culture, stunning natural beauty, and spiritual legacy.
           </p>
           </div>
         </article>
@@ -81,14 +81,14 @@ const About = () => {
             beaches and in peaceful hill stations, and experience the vitality
             of its diverse wildlife sanctuaries and national parks. The state&apos;s
             vibrant festivals, traditional art forms, and bustling markets add
-            to its unique charm. Whether you're seeking spiritual fulfillment,
+            to its unique charm. Whether you&apos;re seeking spiritual fulfillment,
             natural beauty, or cultural richness, Tamil Nadu offers an
             unparalleled journey through South India.
           </p>
           <p className="text-justify text-gray-700 text-sm md:text-base">
             With a wide array of experiences, from ancient heritage sites to
             tranquil beaches and scenic hill stations, Tamil Nadu stands out as
-            one of India's top tourist destinations, promising something special
+            one of India&apos;s top tourist destinations, promising something special
             at every turn.
           </p>
         </article>
