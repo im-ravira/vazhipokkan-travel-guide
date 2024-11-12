@@ -7,7 +7,8 @@
     "dev": "vite --port 7777",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "react": "^18.3.1",

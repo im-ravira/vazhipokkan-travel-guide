@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vazhipokkan.netlify.app/sitemap.xml
