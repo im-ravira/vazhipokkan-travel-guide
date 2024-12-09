@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types"
 
-const DescriptionCard = ({
+const FramedCard = ({
   name,
   src,
   content,
@@ -30,7 +30,7 @@ const DescriptionCard = ({
   </article>
 );
 
-DescriptionCard.propTypes = {
+FramedCard.propTypes = {
   name: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
@@ -39,4 +39,4 @@ DescriptionCard.propTypes = {
   additionalClasses: PropTypes.string,
 };
 
-export default DescriptionCard;
+export default FramedCard;
