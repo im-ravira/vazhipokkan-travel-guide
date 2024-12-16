@@ -10,6 +10,7 @@ import TravelEssentials from "./pages/TravelEssentials";
 import Map from "./pages/Map";
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
+import MaduraiPage from "./pages/Destinations/Madurai";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
+        <Route path="/destinations/madurai" element={<MaduraiPage />} />
         <Route path="/attractions" element={<Attractions />} />
         <Route path="/travel-essentials" element={<TravelEssentials />} />
         <Route path="/map" element={<Map />} />
