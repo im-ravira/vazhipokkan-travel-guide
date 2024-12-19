@@ -38,19 +38,19 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 4000, Overlay
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="flex-none w-full h-[40vh] md:h-[60vh] lg:h-screen object-cover relative">
+          <div key={index} className="flex-none w-full h-[396px] md:h-[60vh] lg:h-screen object-cover relative">
             <img
               src={image.src}
               alt={image.name}
               className="w-full h-full object-cover"
             />
             {Overlay && (
-              <div className="absolute md:bottom-10 bottom-8 md:left-10 left-4 bg-gray-800/60 lg:px-10 lg:py-6 p-2 rounded-lg shadow-lg max-w-[14rem] md:max-w-80 lg:max-w-sm">
-                <h2 className="text-base md:text-xl lg:text-3xl text-left text-white font-extrabold mb-2 md:mb-4">
-                  &quot;Discover more amazing sights and experiences.&quot;
-                </h2>
+              <div className="absolute lg:bottom-10 md:bottom-20 bottom-14 md:left-10 left-4 bg-gray-800/50 lg:px-10 lg:py-6 md:px-6 md:py-4 px-4 py-2 rounded-xl shadow-lg max-w-[14rem] md:max-w-80 lg:max-w-md">
+                <div className="text-base md:text-[1.4rem] lg:text-[1.8rem] lg:leading-9 text-white font-extrabold mb-2 md:mb-4 font-dmSerifDisplay text-center">
+                  &quot;Discover more amazing <br /> sights in Tamil Nadu.&quot;
+                </div>
                 <Link to="/gallery">
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white md:text-base text-xs font-bold ml-2 md:ml-0 md:py-2 py-1 md:px-6 px-3 rounded">
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white md:text-base text-xs font-bold ml-6 lg:ml-10 md:ml-8 md:py-[0.38rem] lg:py-2 py-[0.35rem] md:px-14 lg:px-20 px-10 rounded">
                     Explore
                   </button>
                 </Link>
@@ -61,22 +61,22 @@ const ImageSlider = ({ images, autoPlay = true, autoPlayInterval = 4000, Overlay
       </div>
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 text-white text-2xl px-3 py-1"
+        className="absolute top-[47%] max-sm:top-[45%] left-5 md:left-10 transform -translate-y-1/2 text-white text-2xl px-3 py-1"
       >
         ❮
       </button>
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 text-white text-2xl"
+        className="absolute top-[47%] max-sm:top-[45%] right-5 md:right-10 transform -translate-y-1/2 text-white text-2xl"
       >
         ❯
       </button>
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute lg:bottom-6 md:bottom-10 max-sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-4">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-4 h-1 rounded-sm ${
+            className={`w-4 h-[0.35rem] rounded-sm ${
               index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
           ></button>
