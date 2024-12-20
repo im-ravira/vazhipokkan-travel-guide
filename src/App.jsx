@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Destinations from "./pages/Destinations";
 import Attractions from "./pages/Attractions";
 import MaintenancePage from "./pages/MaintenancePage";
+import PageNotFound from "./pages/PageNotFound";
 import TravelEssentials from "./pages/TravelEssentials";
 import Map from "./pages/Map";
 import { HelmetProvider } from 'react-helmet-async';
@@ -30,7 +31,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<MaintenancePage />} />
+        <Route path="/under-maintenance" element={<MaintenancePage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
     </HelmetProvider>
