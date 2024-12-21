@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Macondo: ['Macondo', 'cursive']
+        macondo: ['Macondo', 'cursive'],
+        dmSerifDisplay: ['"DM Serif Display"', 'serif'],
       }
     },
   },

@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=source+sans+3&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "source sans 3", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM serif Display", sans-serif;
+}
 
 ::selection {
   background-color: rgb(249 115 22);
@@ -15,14 +30,13 @@
 }
 
 .btn {
-    @apply bg-orange-500 hover:bg-orange-600 duration-300 text-white text-sm font-bold outline-double ring-2 transition-colors ring-orange-500/80 shadow-md py-2 px-6;
-  }
+  @apply bg-orange-500 hover:bg-orange-600 duration-300 text-white text-sm font-bold outline-double ring-2 transition-colors ring-orange-500/80 shadow-md;
+}
 
 .btn-primary {
-    @apply rounded-md;
+  @apply rounded-md;
 }
 
 .btn-secondary {
-  @apply rounded-full;
+  @apply rounded-3xl;
 }
-
