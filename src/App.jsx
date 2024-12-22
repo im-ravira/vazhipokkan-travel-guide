@@ -13,6 +13,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
 import MaduraiPage from "./pages/Destinations/Madurai";
 import ChennaiPage from "./pages/Destinations/Chennai";
+import NilgiriOotyPage from "./pages/Destinations/NilgiriOoty";
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/destinations/madurai" element={<MaduraiPage />} />
         <Route path="/destinations/chennai" element={<ChennaiPage />} />
+        <Route path="/destinations/nilgiri-ooty" element={<NilgiriOotyPage />} />
         <Route path="/attractions" element={<Attractions />} />
         <Route path="/travel-essentials" element={<TravelEssentials />} />
         <Route path="/map" element={<Map />} />
